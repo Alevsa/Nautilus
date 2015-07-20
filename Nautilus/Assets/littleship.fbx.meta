@@ -10,17 +10,22 @@ ModelImporter:
     100004: Lamp
     100006: //RootNode
     100008: Plane.001
+    100010: Plane
     400000: Camera
     400002: Cube
     400004: Lamp
     400006: //RootNode
     400008: Plane.001
+    400010: Plane
     2300000: Cube
     2300002: Plane.001
+    2300004: Plane
     3300000: Cube
     3300002: Plane.001
+    3300004: Plane
     4300000: Cube
     4300002: Plane.001
+    4300004: Plane
   materials:
     importMaterials: 1
     materialName: 0
