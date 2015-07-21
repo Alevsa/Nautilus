@@ -298,7 +298,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: f
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000
@@ -313,7 +313,7 @@ InputManager:
     m_Name: Accelerate
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
+    negativeButton: 
     positiveButton: w
     altNegativeButton: 
     altPositiveButton: joystick button 1
