@@ -1535,47 +1535,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 446386, guid: 25e62882782866e4088dc0d756fd7e94, type: 2}
   m_PrefabInternal: {fileID: 2072408607}
---- !u!114 &1905759295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905759292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43c4bb114d9b59a42af2b69088dfc932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 60
-  TurnRate: .5
-  Health: 1000
---- !u!114 &1905759296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905759292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 035a8c3564ea2744cb15c5887b7fe972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipStats: {fileID: 1905759295}
---- !u!54 &1905759297
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905759292}
-  serializedVersion: 2
-  m_Mass: 5
-  m_Drag: .200000003
-  m_AngularDrag: .5
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &2072408607
 Prefab:
   m_ObjectHideFlags: 0
@@ -1617,12 +1576,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 162684, guid: 25e62882782866e4088dc0d756fd7e94, type: 2}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 11449142, guid: 25e62882782866e4088dc0d756fd7e94, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11449142, guid: 25e62882782866e4088dc0d756fd7e94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25e62882782866e4088dc0d756fd7e94, type: 2}
   m_IsPrefabParent: 0

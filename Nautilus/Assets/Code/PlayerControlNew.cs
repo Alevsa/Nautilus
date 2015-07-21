@@ -39,8 +39,7 @@ public class PlayerControlNew : MonoBehaviour {
 		if (Input.GetButtonDown ("Brake"))
 			handlerMovement.Brake ();
 
-		if (Input.GetButton ("Turn"))
-			handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
+		handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
 	}
 	
 }

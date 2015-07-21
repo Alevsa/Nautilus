@@ -15,11 +15,13 @@ public class PlayerControl : MonoBehaviour
 	
 	void FixedUpdate () 
 	{
+        Debug.Log("Hello");
 		// Rotates the vehicle around, it's forward and back rather than left and right for the rotation but w/e.
 		if (Input.GetButton("Turn")) 
 		{
 			gameObject.transform.Rotate(Input.GetAxisRaw("Turn")*turnRate*Vector3.up);
 		}
+
 		if (Input.GetButton ("Accelerate")) 
 		{
 			// Stops you breaking the speed limit, for both forward and reverse.
@@ -40,7 +42,7 @@ public class PlayerControl : MonoBehaviour
 				speed -= brakepower*speed;
 			}
 		}
-		
+
 		// The current speed.
 		gameObject.transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
 	}
