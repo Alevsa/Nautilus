@@ -1505,15 +1505,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -28.4099998
+      value: -11.9700003
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .205857813
+      value: .416715026
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_LocalRotation.y
@@ -1525,11 +1525,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .978581965
+      value: .909037173
       objectReference: {fileID: 0}
     - target: {fileID: 442884, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2008422, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: m_Depth
@@ -1575,6 +1575,14 @@ Prefab:
       propertyPath: far clip plane
       value: 10030
       objectReference: {fileID: 0}
+    - target: {fileID: 11407740, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1905759293}
+    - target: {fileID: 11407740, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
+      propertyPath: Distance
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
   m_IsPrefabParent: 0
@@ -1582,7 +1590,7 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 156690, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
   m_PrefabInternal: {fileID: 1866066179}
---- !u!114 &1866066181
+--- !u!114 &1866066188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1590,14 +1598,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866066180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
+  m_Script: {fileID: 11500000, guid: ba24b58f6de7b0749b9a2b25bb29647d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1905759293}
-  distance: 35
-  height: 2
-  rotationDamping: .100000001
-  heightDamping: 0
+  MinZoom: 10
+  MaxZoom: 18
+  ZoomSpeed: 2
+  RotationSpeed: .100000001
 --- !u!1 &1905759292 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 198420, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}

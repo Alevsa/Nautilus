@@ -7,13 +7,17 @@ public class PlayerControlNew : MonoBehaviour {
 
 	//Ship to be controlled
 	public GameObject Ship;
+    private PlayerShipMovement handlerMovement;
+    private CameraController camControl;
 
 	private bool inMenu = false;
 	private bool shipAlive = true;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+    {
+       handlerMovement = Ship.GetComponent<PlayerShipMovement>();
+       camControl = GameObject.Find("Main Camera").GetComponent<CameraController>();
 	}
 	
 	// Update is called once per frame
@@ -31,8 +35,6 @@ public class PlayerControlNew : MonoBehaviour {
 	//In-game handling
 	void InGameInput() {
 
-		PlayerShipMovement handlerMovement = Ship.GetComponent<PlayerShipMovement> ();
-
 		if (Input.GetButtonDown ("Accelerate"))
 			handlerMovement.Accelerate ();
 
@@ -45,6 +47,15 @@ public class PlayerControlNew : MonoBehaviour {
 			handlerMovement.Break (false);
 
 		handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
+
+        float h = Input.GetAxis("Mouse ScrollWheel");
+        camControl.AdjustZoom(h);
+
+        if(Input.GetMouseButton(1))
+        {
+            float x = Input.GetAxis("Mouse X");
+            camControl.AdjustRotation(x);
+        }
 	}
 	
 }
