@@ -36,8 +36,13 @@ public class PlayerControlNew : MonoBehaviour {
 		if (Input.GetButtonDown ("Accelerate"))
 			handlerMovement.Accelerate ();
 
-		if (Input.GetButtonDown ("Brake"))
-			handlerMovement.Brake ();
+		if (Input.GetButtonDown ("Decelerate"))
+			handlerMovement.Decelerate ();
+
+		if (Input.GetButton ("Break"))
+			handlerMovement.Break (true);
+		else if (Input.GetButtonUp("Break"))
+			handlerMovement.Break (false);
 
 		handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
 	}

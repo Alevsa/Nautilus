@@ -7,6 +7,7 @@ public class PlayerShipMovement : MonoBehaviour {
 
 	private int speedRank;
 	private int maxSpeedRank = 4;
+	private int prevSpeedRank;
 	private float turn;
 
 	// Use this for initialization
@@ -30,11 +31,24 @@ public class PlayerShipMovement : MonoBehaviour {
 		Debug.Log (speedRank);
 	}
 
-	public void Brake() {
+	public void Decelerate() {
 		if (speedRank > 0)
 			speedRank--;
 
 		Debug.Log (speedRank);
+	}
+
+	public void Break(bool br) {
+		if (br) 
+		{
+			prevSpeedRank = speedRank;
+			speedRank = 0;
+		}
+		else
+			speedRank = prevSpeedRank;
+
+		Debug.Log (speedRank);
+
 	}
 
 	public void Turn (int clockwise) {
@@ -45,7 +59,7 @@ public class PlayerShipMovement : MonoBehaviour {
 	void Movement () {
 		int speed = shipStats.Speed;
 		gameObject.GetComponent<Rigidbody> ().AddRelativeForce (Vector3.forward * speedRank * 0.25F * speed);
-		gameObject.GetComponent<Rigidbody> ().AddForceAtPosition (Vector3.right * turn, transform.position + Vector3.forward);
+		gameObject.GetComponent<Rigidbody> ().AddForceAtPosition (Vector3.right * turn / (speed + 1), transform.position + Vector3.forward);
 		turn = 0;
 	}
 }

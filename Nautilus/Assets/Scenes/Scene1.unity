@@ -1309,6 +1309,22 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: TurnRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: Speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_Drag
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AngularDrag
+      value: .200000003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
   m_IsPrefabParent: 0
