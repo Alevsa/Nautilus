@@ -1311,11 +1311,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: TurnRate
-      value: 2
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: Speed
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_Drag
@@ -1324,6 +1324,14 @@ Prefab:
     - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AngularDrag
       value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 18398410, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_ExternalAcceleration.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18380072, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_ExternalAcceleration.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
