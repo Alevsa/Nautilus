@@ -7,7 +7,7 @@ public class PlayerShipMovement : MonoBehaviour {
 
 	private int speedRank;
 	private int maxSpeedRank = 4;
-	private int prevSpeedRank;
+	private int prevSpeedRank = 0;
 	private float turn;
 
 	// Use this for initialization
@@ -41,7 +41,8 @@ public class PlayerShipMovement : MonoBehaviour {
 	public void Break(bool br) {
 		if (br) 
 		{
-			prevSpeedRank = speedRank;
+			if (speedRank != 0)
+				prevSpeedRank = speedRank;
 			speedRank = 0;
 		}
 		else
