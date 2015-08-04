@@ -1633,7 +1633,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11407740, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
       propertyPath: rotationDamping
-      value: .100000001
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407740, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
@@ -1656,7 +1660,7 @@ MonoBehaviour:
   MinZoom: 10
   MaxZoom: 18
   ZoomSpeed: 2
-  RotationSpeed: .100000001
+  RotationSpeed: 5
 --- !u!1 &1905759292 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 198420, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
