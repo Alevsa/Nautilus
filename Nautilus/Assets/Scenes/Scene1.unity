@@ -1573,6 +1573,10 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1905759293}
+    - target: {fileID: 11495704, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
+      propertyPath: ZoomSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
   m_IsPrefabParent: 0

@@ -29,8 +29,8 @@ public class CameraController : MonoBehaviour
         zoom *= ZoomSpeed;
         float y = transform.position.y;
 
-        if(y >= m_MinY && y <= m_MaxY)
-            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, y -= zoom*2, transform.position.z), ZoomSpeed);
+        if (y >= m_MinY && y <= m_MaxY)
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, y -= zoom*2, transform.position.z), ZoomSpeed);
 
         y = transform.position.y;
 
