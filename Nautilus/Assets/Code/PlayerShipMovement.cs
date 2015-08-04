@@ -41,7 +41,8 @@ public class PlayerShipMovement : MonoBehaviour {
 	public void Break(bool br) {
 		if (br) 
 		{
-			prevSpeedRank = speedRank;
+			if (speedRank != 0)
+				prevSpeedRank = speedRank;
 			speedRank = 0;
 		}
 		else
