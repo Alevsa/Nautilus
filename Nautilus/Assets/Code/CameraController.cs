@@ -13,17 +13,15 @@ public class CameraController : MonoBehaviour
     private float m_MaxY;
 
     private SmoothFollow m_smoothFollow;
-	// Use this for initialization
+    private Transform player;
+
 	void Start () 
     {
         m_smoothFollow = GetComponent<SmoothFollow>();
         m_MinY = MinZoom + 18;
         m_MaxY = MaxZoom + 26;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+        player = GameObject.Find("Player").transform;
 	}
 
     public void AdjustZoom(float zoom)
@@ -58,9 +56,6 @@ public class CameraController : MonoBehaviour
 
     public void AdjustRotation(float rotation)
     {
-        float y = transform.rotation.y;
-
-        Quaternion dest = new Quaternion(transform.rotation.x, y -= rotation/2, transform.rotation.z, transform.rotation.w);
-        transform.rotation = Quaternion.Lerp(transform.rotation, dest, RotationSpeed);
+        transform.RotateAround(player.position, Vector3.up,  rotation*RotationSpeed);
     }
 }
