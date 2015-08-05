@@ -15,7 +15,7 @@ namespace UnityStandardAssets.Utility
 		private float height = 5.0f;
 
 		[SerializeField]
-		private float rotationDamping;
+		public float RotationDamping;
 		[SerializeField]
 		private float heightDamping;
 
@@ -37,7 +37,7 @@ namespace UnityStandardAssets.Utility
 			var currentHeight = transform.position.y;
 
 			// Damp the rotation around the y-axis
-			currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, rotationDamping * Time.deltaTime);
+			currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, RotationDamping * Time.deltaTime);
 
 			// Damp the height
 			currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
