@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+<town id="default">
+This is the default town statement, this means the town is not finished.
+</town>
+
+<town id="test">
+You spent the days of your youth in Exemeru, known throughout the land as the town of testing. You had a hard life growing up here.
+</town>
+
+<town id="hana">
+</town>
+
+<town id="banh">
+</town>
+
+<town id="moho">
+</town>
+
+<town id="freeport">
+
+</town>
+
+<town id="wyrd">
+You dock at a small dirty pier. The Weald is rarely visited by ordinary folk. It is however popular with mystics and other oddballs. The legend goes that 
+</town>
+
+</root>
