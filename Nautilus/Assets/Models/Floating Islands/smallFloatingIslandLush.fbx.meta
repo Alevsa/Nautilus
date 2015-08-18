@@ -1,21 +1,15 @@
 fileFormatVersion: 2
-guid: b6625925547feff4a97f900712a8bec2
-timeCreated: 1438957840
+guid: 2b7565693b1726642a37a8104ad9dc15
+timeCreated: 1439875547
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Camera
-    100002: //RootNode
-    100004: Icosphere
-    100006: Lamp
-    400000: Camera
-    400002: //RootNode
-    400004: Icosphere
-    400006: Lamp
-    2300000: Icosphere
-    3300000: Icosphere
-    4300000: Icosphere
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Island
   materials:
     importMaterials: 1
     materialName: 0
