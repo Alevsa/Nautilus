@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4aa7ce359cf06d04380a469f10c60d85
-timeCreated: 1439914423
+guid: f877fd5859b1a9c4880bbc8ab8285531
+timeCreated: 1439914740
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -10,6 +10,8 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Icosphere
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,7 +69,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

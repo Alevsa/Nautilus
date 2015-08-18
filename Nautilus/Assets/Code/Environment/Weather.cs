@@ -6,15 +6,18 @@ public class Weather : MonoBehaviour
 	// This whole script is quite rought but it's functional.
 	public GameObject focus;
 	public GameObject rainParticles;
-	// This number is a percentage
+	// This number is a percentage per frame
 	public float rainChance = 1f;
+	public float snowChance = 1f;
 	// Duration in minutes
 	public float _duration = 1f;
+	private float totalProbability;
 	private float duration;
-	private bool isRaining = false;
+	private bool weatherActive = false;
 
 	void start()
 	{
+		totalProbability = rainChance + snowChance;
 		duration = _duration * 3600f;
 	}
 
@@ -24,8 +27,8 @@ public class Weather : MonoBehaviour
 		gameObject.transform.position = focus.transform.position;
 		#endregion
 
-		#region If it's not raining, chance to trigger rain
-		if (!isRaining) {
+			#region If it's not raining, chance to trigger rain [I'll change this to allow a chance of snow and other stuff later.]
+		if (!weatherActive) {
 			if (Random.value < rainChance / 100f) {
 				rainParticlesToggle ();
 			}
@@ -46,7 +49,7 @@ public class Weather : MonoBehaviour
 
 	void rainParticlesToggle()
 	{
-		isRaining = !isRaining;
-		rainParticles.SetActive(isRaining);
-	}
+		weatherActive = !weatherActive;
+		rainParticles.SetActive (weatherActive);
+}
 }
