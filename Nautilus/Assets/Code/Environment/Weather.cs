@@ -6,6 +6,8 @@ public class Weather : MonoBehaviour
 	// This whole script is quite rought but it's functional.
 	public GameObject focus;
 	public GameObject rainParticles;
+	// rate at which the sound effects change in volume
+	public float volumeIncreaseSpeed = 0.01f;
 	// This number is a percentage per frame
 	public float rainChance = 1f;
 	public float snowChance = 1f;
@@ -31,6 +33,7 @@ public class Weather : MonoBehaviour
 		if (!weatherActive) {
 			if (Random.value < rainChance / 100f) {
 				rainParticlesToggle ();
+				fadeAudio(rainParticles, true);
 			}
 		} 
 		#endregion
@@ -51,5 +54,16 @@ public class Weather : MonoBehaviour
 	{
 		weatherActive = !weatherActive;
 		rainParticles.SetActive (weatherActive);
-}
+	}
+
+	void fadeAudio(GameObject weatherEffect, bool fadingIn)
+	{
+		AudioSource audio = weatherEffect.GetComponent <AudioSource>();
+		if (audio.volume < 0.8f && fadingIn) {
+			audio.volume += volumeIncreaseSpeed;
+		} else if (!fadingIn) 
+		{
+			audio.volume -= volumeIncreaseSpeed;
+		}
+	}
 }
