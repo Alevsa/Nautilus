@@ -8,41 +8,54 @@ public class Weather : MonoBehaviour
 	public GameObject focus;
 	public GameObject rainParticles;
 	#endregion
+
 	#region Variables, pretty self explanatory from the names.
+	// How heavily the rain falls. (Max emissivity of the emitter.)
+	public float _maxWeatherDensity = 5000;
 	public float maxVolume = 0.8f;
 	// rate at which the sound effects change in volume
-	public float fadeTime = 1f;
-	private float _fadeTime = 1f;
+	public float _fadeTime = 1f;
 	// This number is a percentage per frame
 	public float rainChance = 1f;
 	//public float snowChance = 1f;
+
 	// Duration in seconds
 	public float _duration = 60f;
 	private float duration = 60f;
 
 	private bool weatherActive = false;
-	// Things that need fixing
+	// This will be used to choose what weather happens.
 	private float totalProbability;
+	// Audio Sources
 	private AudioSource rainAudio;
+	// Particle emissivity
+	private EllipsoidParticleEmitter rainEmitter;
 	#endregion
 
-	void start()
+	#region Start method, just gets the audio component(s) and sets up some stuff.
+	void Start()
 	{
 		duration = _duration;
-		fadeTime = _fadeTime;
 		rainAudio = rainParticles.GetComponent <AudioSource>();
+		rainEmitter = rainParticles.GetComponent<EllipsoidParticleEmitter>();	
 		//totalProbability = rainChance + snowChance;	
 	}
+	#endregion
 
+	#region Update method
 	void Update () 
 	{
-		#region Handles the fading in/out of the audio
-		if (weatherActive) {
-			fadeRainAudio (true, rainParticles);
-		}
-		if (_duration <= fadeTime && weatherActive)
+		#region Handles the fading in/out of the effect
+		if (weatherActive) 
 		{
-			fadeRainAudio(false,rainParticles); 
+			if (duration >= _fadeTime)
+			{
+				fadeEffect (true, rainAudio, rainEmitter);
+			}
+			else if (duration <= _fadeTime)
+			{
+				fadeEffect(false,rainAudio, rainEmitter); 
+			}
 		}
 		#endregion
 
@@ -60,7 +73,7 @@ public class Weather : MonoBehaviour
 
 		#region Else if the duration is up, stop raining or tick down the duration
 		else {
-			if (duration == 0) {
+			if (duration <= 0) {
 				rainParticlesToggle ();
 				duration = _duration;
 			} else {
@@ -70,6 +83,8 @@ public class Weather : MonoBehaviour
 		#endregion
 
 	}
+	#endregion
+
 	#region Toggles the rain particles on and off
 	void rainParticlesToggle()
 	{
@@ -78,15 +93,16 @@ public class Weather : MonoBehaviour
 	}
 	#endregion
 
-	#region Fades the audio in [and later will fade it out]
-	void fadeRainAudio(bool fadingIn, GameObject source)
+	#region Fades the effect in/out
+	void fadeEffect(bool fadingIn, AudioSource audio, EllipsoidParticleEmitter particles)
 	{
-		AudioSource audio = source.GetComponent<AudioSource>();
 		if (audio.volume < maxVolume && fadingIn) {
-			audio.volume += (maxVolume/fadeTime) * Time.deltaTime;
+			audio.volume += (maxVolume/_fadeTime) * Time.deltaTime;
+			particles.maxEmission += (_maxWeatherDensity/_fadeTime) * Time.deltaTime;
 		} else if (audio.volume >= 0f && !fadingIn) 
 		{
-			audio.volume -= (maxVolume/fadeTime) * Time.deltaTime;
+			audio.volume -= (maxVolume/_fadeTime) * Time.deltaTime;
+			particles.maxEmission -= (_maxWeatherDensity/_fadeTime) * Time.deltaTime;
 		}
 	}
 	#endregion

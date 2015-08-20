@@ -933,6 +933,42 @@ Prefab:
       propertyPath: focus
       value: 
       objectReference: {fileID: 1905759292}
+    - target: {fileID: 11495706, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: _duration
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495706, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: rainChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495706, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: fadeTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495706, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: _fadeTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 110622, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574858, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: minEmission
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574858, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: maxEmission
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574858, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: maxEnergy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574858, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: minEnergy
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
   m_IsPrefabParent: 0
