@@ -17,7 +17,7 @@ public class PlayerShipMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (body.velocity);
+		Debug.Log (body.velocity.magnitude);
 	}
 
 	void FixedUpdate() {
@@ -25,12 +25,19 @@ public class PlayerShipMovement : MonoBehaviour {
 	}
 
 	public void Accelerate() {
-//		if (body.velocity 
-//		forwardForce = Vector3.forward * shipStats.Acceleration;
+		if (body.velocity.magnitude < shipStats.MaxSpeed)
+			forwardForce = Vector3.forward * shipStats.Acceleration;
+		else
+			forwardForce = Vector3.zero;
 	}
 
 	public void Break() {
+//		if (body.velocity.magnitude > shipStats.Acceleration / body.mass)
+//			forwardForce = Vector3.back * shipStats.Acceleration;
+	}
 
+	public void Decelerate () {
+		forwardForce = Vector3.zero;
 	}
 
 	public void Turn (int clockwise) {		
@@ -39,7 +46,7 @@ public class PlayerShipMovement : MonoBehaviour {
 
 	void Movement () {
 		body.AddRelativeForce (forwardForce);
-		body.AddForceAtPosition (Vector3.right * turn , transform.position + Vector3.forward);
+		body.AddForceAtPosition (Vector3.right * turn, transform.position + Vector3.forward);
 		turn = 0;
 	}
 }

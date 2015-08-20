@@ -49,6 +49,8 @@ public class PlayerControlNew : MonoBehaviour {
 			handlerMovement.Accelerate ();
 		else if (Input.GetButton ("Break"))
 			handlerMovement.Break ();
+		else 
+			handlerMovement.Decelerate ();
 
 		handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
 
