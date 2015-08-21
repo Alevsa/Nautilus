@@ -1,40 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Xml;
 
-public class Enter : MonoBehaviour 
+public class LoadTown : MonoBehaviour 
 {
 	private int[] goods = new int[10];
-	public GameObject townUi;
+	public GameObject titleBox;
+	public GameObject subtitleBox;
+	public GameObject descriptionBox;
 	public GameObject dockButton;
-	public string townname = "default";
-	public string subtitle = "default";
-	public string townID = "default";
-
-	// Shows the "Press E to dock" button
-	void OnTriggerEnter2D(Collider2D other)
+	private XmlDocument towns = new XmlDocument();
+	
+	// Loads in the town's name and subname via a public variable in the script, the town's 
+	// description is stored in XML being a bit larger than the names though it may or may not
+	// be a good idea to switch everything to XML later. Probably not as it'll make the 
+	// inspector about a million times harder to follow and I'll have to switch between looking 
+	// at what goes where in the XML file and stuff.
+	public void load(string name, string subname, string townID, int[] goods)
 	{
-		dockButton.SetActive (true);
+		towns.Load ("Assets/Text/Town/TownDescriptions");
+		XmlNode node = towns.SelectSingleNode("/root/town[@id='" + townID + "']");
+		string description = node.InnerText;
+		titleBox.GetComponent<Text>().text = name;
+		subtitleBox.GetComponent<Text>().text = subname;
+		descriptionBox.GetComponent<Text>().text = description; 
 	}
-	void OnTriggerExit2D(Collider2D other)
+	
+	public void trade()
 	{
+	}
+	
+	// Get this to work with the E button too methinks.
+	public void undock()
+	{
+		Time.timeScale = 1;
 		dockButton.SetActive (false);
-	}
-	// Generates a gui with all the town details on from the information above.
-	void OnTriggerStay2D(Collider2D other)
-	{
-		if (Input.GetButtonDown ("Dock")) 
-		{
-			if (Time.timeScale == 1) 
-			{
-				dockButton.SetActive (false);
-				Time.timeScale = 0;
-				townUi.SetActive (true);
-				LoadTown town = (LoadTown)townUi.GetComponent(typeof(LoadTown));
-				town.load(townname, subtitle, townID, goods);
-
-				// for each goods in good that doesnt have an element of value -1 put a new good in and set it's price to whatever
-			} 
-		}
+		gameObject.SetActive (false);
 	}
 }
