@@ -56,7 +56,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   townUi: {fileID: 0}
   dockButton: {fileID: 0}
-  goods: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   townname: 64656661756c74
   subtitle: 64656661756c74
   townID: 64656661756c74
