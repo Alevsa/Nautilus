@@ -27,7 +27,7 @@ public class Enter : MonoBehaviour
 		{
 			if (Time.timeScale == 1) 
 			{
-				dockButton.SetActive (false);
+				dockButton.SetActive (!dockButton.activeSelf);
 				Time.timeScale = 0;
 				townUi.SetActive (true);
 				LoadTown town = (LoadTown)townUi.GetComponent(typeof(LoadTown));

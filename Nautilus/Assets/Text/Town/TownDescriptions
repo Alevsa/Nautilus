@@ -4,4 +4,7 @@
   <town id="default">
     This is the default description
   </town>
+    <town id="moscow">
+    You arrive in Moscow. The town is eerily silent. The oppressive regime of the Grand Prince has the people firmly underfoot. The occasional squad of Oprichniki stalk the streets. They are the Grand Prince's enforcers. They expect you to be on your best behavior. You disembark and begin to explore the town. 
+  </town>
 </root>
