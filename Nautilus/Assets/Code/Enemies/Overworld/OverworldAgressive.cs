@@ -9,14 +9,19 @@ public class OverworldAgressive : MonoBehaviour
 	// Create idle behavior
 
 	#region Variables
-	private bool spottedFocus = false;
 	private GameObject focus;
+	private GameObject player;
 	public GameObject pointer;
-	public float turnRate = 0.7f;
+	private RouteFinder routeFinder;
+	float turnRate = 0.7f;
 	public float maxSpeed = 10f;
 	private float speed = 0f;
 	public float visionRange = 50f;
 	public float acceleration = 0.1f;
+
+	// For the routefinder
+	private GameObject[] waypoints;
+	private int[] visited;
 	#endregion
 
 	#region Start method
@@ -24,14 +29,23 @@ public class OverworldAgressive : MonoBehaviour
 	{
 		// This happens as the enemy will need to find the player when it spawns rather than having it preassigned in the inspector.
 		// In the same vein will have to have the pointer assigned this way.
-		focus = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("Player");
+		routeFinder = new RouteFinder();
+
+		// for the routefinder
+		waypoints = GameObject.FindGameObjectsWithTag("waypoint");
+		visited = new int[waypoints.Length];
+		for (int i = 0; i < visited.Length; i++)
+		{
+			visited[i] = 0;
+		}
 	}
 	#endregion
 
 	#region Update
 	void Update () 
 	{
-		if (iCanSeeMyFocus())
+		if (iCanSeePlayer())
 		{
 			moveToFocus();
 		}
@@ -59,20 +73,27 @@ public class OverworldAgressive : MonoBehaviour
 	}
 	#endregion
 
-	#region Idle behavior, will likely be similar to neutral behavior which is unimplemented
+	IEnumerator moveToWaypoint()
+	{
+		return null;
+	}
+
+	#region Idle behavior, patrols the ship around
 	void idle()
 	{
-
+		focus = returnNearestValidWaypoint(gameObject);
+		moveToFocus();
 	}
 	#endregion
 
-	#region Sees if the focus is in range
+	#region Sees if the player is in range
 	// It's not based on a cone or anything because generally people on ships will look in all directions, Though it would make
 	// sense to implement a cone for a sea monster enemy idea I had. More on that later though.
-	bool iCanSeeMyFocus()
+	bool iCanSeePlayer()
 	{
-		if (Vector3.Magnitude(focus.transform.position - gameObject.transform.position) <= visionRange)
+		if (Vector3.Magnitude(player.transform.position - gameObject.transform.position) <= visionRange)
 		{
+			focus = player;
 			return true;
 		}
 		else 
@@ -81,4 +102,29 @@ public class OverworldAgressive : MonoBehaviour
 		}
 	}
 	#endregion
+
+	#region Finds next waypoint
+	public GameObject returnNearestValidWaypoint(GameObject origin)
+	{
+		int closest = 0;
+		GameObject min = waypoints[0];
+		for (int i = 1; i<waypoints.Length; i++)
+		{
+			if (!Physics.Raycast(origin.transform.position, waypoints[i].transform.position))
+			{
+				float distance = Vector3.Magnitude(origin.transform.position - waypoints[i].transform.position);
+				if (distance < closest)
+				{
+					if (visited[i] <= visited[closest])
+					{
+						closest = i;
+					}
+				}
+			}
+		}
+		visited[closest] += 1;
+		return waypoints[closest];
+	}
+	#endregion
+
 }
