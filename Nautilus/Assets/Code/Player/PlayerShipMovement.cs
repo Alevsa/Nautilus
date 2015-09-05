@@ -6,6 +6,7 @@ public class PlayerShipMovement : MonoBehaviour {
 	public ShipStats shipStats;
 
 	private Rigidbody body;
+	private float speed;
 	private Vector3 forwardForce;
 	private float turn;
 
@@ -24,16 +25,31 @@ public class PlayerShipMovement : MonoBehaviour {
 		Movement ();
 	}
 
-	public void Accelerate() 
+	public IEnumerator Accelerate() 
 	{
+		while (speed < shipStats.MaxSpeed)
+		{
+			speed += shipStats.Acceleration;
+			yield return null;
+		}
+	
+	
+	/*
 		if (body.velocity.magnitude < shipStats.MaxSpeed)
 			forwardForce = Vector3.forward * shipStats.Acceleration;
 		else
 			forwardForce = Vector3.zero;
+	*/
 	}
 
-	public void Brake() 
+	public IEnumerator Brake() 
 	{
+		while (speed > 0)
+		{
+			speed -= shipStats.Acceleration;
+			yield return null;
+		}
+	
 //	if (body.velocity.magnitude > shipStats.Acceleration / body.mass)
 //			forwardForce = Vector3.back * shipStats.Acceleration;
 	}
@@ -47,8 +63,8 @@ public class PlayerShipMovement : MonoBehaviour {
 	}
 
 	void Movement () {
-		body.AddRelativeForce (forwardForce);
-		//transform.Rotate(Vector2.up * turn);
+		gameObject.transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+	//	body.AddRelativeForce (forwardForce);
 		body.AddForceAtPosition (Vector3.right * turn, transform.position + Vector3.forward);
 		turn = 0;
 	}
