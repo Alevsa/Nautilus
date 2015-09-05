@@ -48,8 +48,8 @@ public class PlayerControlNew : MonoBehaviour {
 
 		if (Input.GetButton ("Accelerate"))
 			handlerMovement.Accelerate ();
-		else if (Input.GetButton ("Break"))
-			handlerMovement.Break ();
+		else if (Input.GetButton ("Brake"))
+			handlerMovement.Brake ();
 		else 
 			handlerMovement.Decelerate ();
 

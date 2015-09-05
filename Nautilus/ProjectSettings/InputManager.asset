@@ -342,7 +342,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Break
+    m_Name: Brake
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
