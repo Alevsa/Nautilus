@@ -63,8 +63,9 @@ public class PlayerShipMovement : MonoBehaviour {
 	}
 
 	void Movement () {
-		gameObject.transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
-	//	body.AddRelativeForce (forwardForce);
+	//	gameObject.transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+		forwardForce = Vector3.forward * speed;
+		body.AddRelativeForce (forwardForce);
 		body.AddForceAtPosition (Vector3.right * turn, transform.position + Vector3.forward);
 		turn = 0;
 	}

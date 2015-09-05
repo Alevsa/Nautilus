@@ -48,7 +48,7 @@ public class PlayerControlNew : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Accelerate"))
 			handlerMovement.StartCoroutine("Accelerate");
-		else if (Input.GetButton ("Brake"))
+		else if (Input.GetButtonDown ("Brake"))
 			handlerMovement.StartCoroutine("Brake");
 		else 
 			handlerMovement.Decelerate ();
