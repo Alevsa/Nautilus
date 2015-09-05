@@ -11,33 +11,51 @@ public class CameraControlNew : MonoBehaviour {
 	[HideInInspector]
 	public Vector3 newPosition;
 
+	private bool bControlled = false;
+
 	// Use this for initialization
 	void Start () 
 	{
-		newPosition = cameraFollow.Target.transform.position - this.transform.position;
+		newPosition = this.transform.position - cameraFollow.Target.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//if (!bControlled)
+		//	GetBehind ();
+	}
+
+	void LateUpdate()
+	{
+		//bControlled = false;
 	}
 
 	public void ChangeZoom (int positive)
 	{
 		if (positive > 0)
-			newPosition -= newPosition * ZoomSpeed;
+		{
+			if ((newPosition - (newPosition * ZoomSpeed)).magnitude < MinZoom)
+				newPosition = Vector3.ClampMagnitude(newPosition, MinZoom);
+			else
+				newPosition -= newPosition * ZoomSpeed;
+		}
 		else
+		{
 			newPosition += newPosition * ZoomSpeed;
+			newPosition = Vector3.ClampMagnitude(newPosition, MaxZoom);
+		}
 	}
 
 	public void HandleMouseX (float amount)
 	{
-			OrbitXZ (amount);
+			OrbitXZ (-amount);
+			bControlled = true;
 	}
 
 	public void HandleMouseY (float amount)
 	{
 			OrbitYZ (amount);
+			bControlled = true;
 	}
 
 	public void OrbitXZ (float amount)
@@ -50,17 +68,24 @@ public class CameraControlNew : MonoBehaviour {
 	public void OrbitYZ (float amount)
 	{
 		float distance = newPosition.magnitude;
-		Vector3 cross = Vector3.Cross (new Vector3 (0f, newPosition.y, newPosition.z) * amount, Vector3.right);
 
-		if ((newPosition.y + cross.y) > distance) 
-		{
-			float div = (distance - newPosition.y) / cross.y ;
-			cross.y = distance - newPosition.y;
-			cross.x *= div;
-		}
+		Vector3 projectionXZ = new Vector3 (newPosition.x, 0f, newPosition.z);
+
+		Vector3 perpXZ = new Vector3 (-projectionXZ.z, 0f, projectionXZ.x).normalized;
+		Debug.Log (projectionXZ + " : " + perpXZ);
+
+		Vector3 cross = Vector3.Cross (newPosition * amount, perpXZ);
+
+		if (Mathf.Pow ((newPosition.y + cross.y), 2) > Mathf.Pow (distance,2)) 
+			return;
 
 		newPosition += cross;
 
 		newPosition = Vector3.ClampMagnitude (newPosition, distance);
+	}
+
+	public void GetBehind()
+	{
+		//OrbitXZ (1f);
 	}
 }

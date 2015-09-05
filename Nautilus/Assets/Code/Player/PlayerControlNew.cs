@@ -76,9 +76,6 @@ public class PlayerControlNew : MonoBehaviour {
 			m_CamControl.HandleMouseX(x);
 			m_CamControl.HandleMouseY(y);
         }
-
-        //else
-           // m_smoothFollow.RotationDamping = m_RotDamping;
     }
 	
 }
