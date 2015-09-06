@@ -133,10 +133,14 @@ public class OverworldAgressive : MonoBehaviour
 		{
 			if (waypointDistance[i] < minDistance && i != excluding)
 			{
+				minDistance = waypointDistance[i];
 				minIndex = i;
 			}
 		}
 		excluding = minIndex;
+		visited[minIndex]++;
+		//Debug.Log(minIndex);
+		//Debug.Log(excluding);
 		return waypoints[minIndex];
 
 	}
