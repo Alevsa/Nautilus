@@ -18,7 +18,7 @@ public class PlayerShipMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (body.velocity.magnitude);
+//		Debug.Log (body.velocity.magnitude);
 	}
 
 	void FixedUpdate() {

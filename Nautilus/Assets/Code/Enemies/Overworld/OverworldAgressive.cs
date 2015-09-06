@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System;
+using System.Linq;
 
 public class OverworldAgressive : MonoBehaviour 
 {
@@ -12,16 +14,17 @@ public class OverworldAgressive : MonoBehaviour
 	private GameObject focus;
 	private GameObject player;
 	public GameObject pointer;
-	private RouteFinder routeFinder;
-	float turnRate = 0.7f;
+	public float turnRate = 0.7f;
 	public float maxSpeed = 10f;
 	private float speed = 0f;
 	public float visionRange = 50f;
 	public float acceleration = 0.1f;
+	private int excluding;
 
 	// For the routefinder
 	private GameObject[] waypoints;
 	private int[] visited;
+	private bool bored = true;
 	#endregion
 
 	#region Start method
@@ -30,14 +33,14 @@ public class OverworldAgressive : MonoBehaviour
 		// This happens as the enemy will need to find the player when it spawns rather than having it preassigned in the inspector.
 		// In the same vein will have to have the pointer assigned this way.
 		player = GameObject.FindGameObjectWithTag("Player");
-		routeFinder = new RouteFinder();
+
 
 		// for the routefinder
 		waypoints = GameObject.FindGameObjectsWithTag("waypoint");
 		visited = new int[waypoints.Length];
 		for (int i = 0; i < visited.Length; i++)
 		{
-			visited[i] = 0;
+			visited[i] = 1;
 		}
 	}
 	#endregion
@@ -49,7 +52,7 @@ public class OverworldAgressive : MonoBehaviour
 		{
 			moveToFocus();
 		}
-		else 
+		else if (bored)
 		{
 			idle();
 		}
@@ -73,16 +76,28 @@ public class OverworldAgressive : MonoBehaviour
 	}
 	#endregion
 
-	IEnumerator moveToWaypoint()
+	public IEnumerator moveToWaypoint()
 	{
-		return null;
+		while (true)
+		{
+			moveToFocus();
+			yield return null;
+		}
 	}
-
+	
+	void OnTriggerEnter(Collider other)
+	{
+	// breaks the game	bored = true;
+		StopCoroutine("moveToWaypoint");
+		bored = true;
+	}
+	
 	#region Idle behavior, patrols the ship around
 	void idle()
 	{
 		focus = returnNearestValidWaypoint(gameObject);
-		moveToFocus();
+		bored = false;
+		StartCoroutine("moveToWaypoint");
 	}
 	#endregion
 
@@ -94,6 +109,7 @@ public class OverworldAgressive : MonoBehaviour
 		if (Vector3.Magnitude(player.transform.position - gameObject.transform.position) <= visionRange)
 		{
 			focus = player;
+			StopCoroutine("moveToWaypoint");
 			return true;
 		}
 		else 
@@ -106,24 +122,23 @@ public class OverworldAgressive : MonoBehaviour
 	#region Finds next waypoint
 	public GameObject returnNearestValidWaypoint(GameObject origin)
 	{
-		int closest = 0;
-		GameObject min = waypoints[0];
-		for (int i = 1; i<waypoints.Length; i++)
+		float[] waypointDistance = new float[waypoints.Length];
+		for (int i = 0; i < waypoints.Length; i++) 
 		{
-			if (!Physics.Raycast(origin.transform.position, waypoints[i].transform.position))
+			waypointDistance[i] = Vector3.Magnitude(origin.transform.position - waypoints[i].transform.position)*visited[i];
+		}
+		int minIndex = 0;
+		float minDistance = Mathf.Infinity;
+		for (int i = 0; i<waypointDistance.Length; i++)
+		{
+			if (waypointDistance[i] < minDistance && i != excluding)
 			{
-				float distance = Vector3.Magnitude(origin.transform.position - waypoints[i].transform.position);
-				if (distance < closest)
-				{
-					if (visited[i] <= visited[closest])
-					{
-						closest = i;
-					}
-				}
+				minIndex = i;
 			}
 		}
-		visited[closest] += 1;
-		return waypoints[closest];
+		excluding = minIndex;
+		return waypoints[minIndex];
+
 	}
 	#endregion
 
