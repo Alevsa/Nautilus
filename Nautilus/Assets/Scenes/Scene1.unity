@@ -3114,10 +3114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 1574176358}
-  turnRate: 10
-  maxSpeed: 50
+  turnRate: 1
+  maxSpeed: 10
   visionRange: 20
-  acceleration: 1
+  acceleration: 5
 --- !u!23 &245435150
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3168,7 +3168,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245435148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 696.599976, y: 0, z: 685.299988}
+  m_LocalPosition: {x: 749.200012, y: 0, z: 682.5}
   m_LocalScale: {x: 1, y: 1, z: -6.58500957}
   m_Children:
   - {fileID: 1574176362}
@@ -3181,9 +3181,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245435148}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_Mass: 4
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6478,7 +6478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 770.5
+      value: 763.5
       objectReference: {fileID: 0}
     - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6486,7 +6486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 549
+      value: 726.299988
       objectReference: {fileID: 0}
     - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6550,11 +6550,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AABB.m_Center.y
-      value: .024181366
+      value: .0241818428
       objectReference: {fileID: 0}
     - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AABB.m_Center.z
-      value: .0257725939
+      value: .0257725958
       objectReference: {fileID: 0}
     - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AABB.m_Extent.x
@@ -6566,7 +6566,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AABB.m_Center.y
-      value: .00121259689
+      value: .00121307373
       objectReference: {fileID: 0}
     - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_AABB.m_Extent.y

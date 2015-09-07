@@ -21,6 +21,7 @@ public class OverworldAgressive : MonoBehaviour
 	private int excluding;
 	private Rigidbody body;
 	private bool inPursuit = false;
+	private float y = 0;
 
 	// For the routefinder
 	private GameObject[] waypoints;
@@ -48,7 +49,7 @@ public class OverworldAgressive : MonoBehaviour
 
 	#region Update
 	void Update () 
-	{
+	{	
 		if (inPursuit)
 		{
 			bored = true;
@@ -96,6 +97,14 @@ public class OverworldAgressive : MonoBehaviour
 			moveToFocus();
 			yield return null;
 		}
+	}
+	
+	void OnCollisionEnter(Collision collision)
+	{
+		// Collisions are the only event that can screw up the Y level so this code is here to fix that.
+		transform.position = new Vector3(transform.position.x, y, transform.position.z);
+		StopCoroutine("moveToWaypoint");
+		bored = true;
 	}
 	
 	void OnTriggerEnter(Collider other)
