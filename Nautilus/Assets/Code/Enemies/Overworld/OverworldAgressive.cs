@@ -8,8 +8,7 @@ public class OverworldAgressive : MonoBehaviour
 	// THINGS TO DO:
 	//
 	// Assign pointer programatically
-	// Create idle behavior
-
+	
 	#region Variables
 	private GameObject focus;
 	private GameObject player;
@@ -20,6 +19,8 @@ public class OverworldAgressive : MonoBehaviour
 	public float visionRange = 50f;
 	public float acceleration = 0.1f;
 	private int excluding;
+	private Rigidbody body;
+	private bool inPursuit = false;
 
 	// For the routefinder
 	private GameObject[] waypoints;
@@ -33,7 +34,7 @@ public class OverworldAgressive : MonoBehaviour
 		// This happens as the enemy will need to find the player when it spawns rather than having it preassigned in the inspector.
 		// In the same vein will have to have the pointer assigned this way.
 		player = GameObject.FindGameObjectWithTag("Player");
-
+		body = GetComponent<Rigidbody> ();
 
 		// for the routefinder
 		waypoints = GameObject.FindGameObjectsWithTag("waypoint");
@@ -48,14 +49,24 @@ public class OverworldAgressive : MonoBehaviour
 	#region Update
 	void Update () 
 	{
+		if (inPursuit)
+		{
+			bored = true;
+		}
 		if (iCanSeePlayer())
 		{
+			bored = false;
+			inPursuit = true;
+			focus = player;
+			StopCoroutine("moveToWaypoint");
 			moveToFocus();
 		}
+		
 		else if (bored)
 		{
 			idle();
 		}
+
 	}
 	#endregion
 
@@ -71,7 +82,9 @@ public class OverworldAgressive : MonoBehaviour
 		#region Rotates the enemy to face the player
 		pointer.transform.LookAt(focus.transform);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, pointer.transform.rotation, turnRate);
-		gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		//gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		Vector3 forwardForce = Vector3.forward * speed;
+		body.AddRelativeForce (forwardForce);
 		#endregion
 	}
 	#endregion
@@ -87,7 +100,6 @@ public class OverworldAgressive : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-	// breaks the game	bored = true;
 		StopCoroutine("moveToWaypoint");
 		bored = true;
 	}
@@ -108,12 +120,11 @@ public class OverworldAgressive : MonoBehaviour
 	{
 		if (Vector3.Magnitude(player.transform.position - gameObject.transform.position) <= visionRange)
 		{
-			focus = player;
-			StopCoroutine("moveToWaypoint");
 			return true;
 		}
 		else 
 		{
+			inPursuit = false;
 			return false;
 		}
 	}
@@ -138,9 +149,7 @@ public class OverworldAgressive : MonoBehaviour
 			}
 		}
 		excluding = minIndex;
-		visited[minIndex]++;
-		//Debug.Log(minIndex);
-		//Debug.Log(excluding);
+		visited[minIndex] += 2;
 		return waypoints[minIndex];
 
 	}
