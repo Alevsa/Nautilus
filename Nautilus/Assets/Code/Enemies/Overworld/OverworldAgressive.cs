@@ -7,7 +7,7 @@ public class OverworldAgressive : MonoBehaviour
 {
 	// THINGS TO DO:
 	//
-	// Assign pointer programatically
+	// ? ? ?
 	
 	#region Variables
 	private GameObject focus;
@@ -22,6 +22,7 @@ public class OverworldAgressive : MonoBehaviour
 	private Rigidbody body;
 	private bool inPursuit = false;
 	private float y = 0;
+	private float stuckTime = 3f*60f;
 
 	// For the routefinder
 	private GameObject[] waypoints;
@@ -45,6 +46,8 @@ public class OverworldAgressive : MonoBehaviour
 		{
 			visited[i] = 1;
 		}
+		
+		fadeIn();
 	}
 	#endregion
 
@@ -165,6 +168,31 @@ public class OverworldAgressive : MonoBehaviour
 		visited[minIndex] += 2;
 		return waypoints[minIndex];
 
+	}
+	#endregion
+	
+	IEnumerable fadeIn()
+	{
+		for (float i = 0; i<3f; i+=Time.deltaTime)
+		{
+			
+		}
+	}
+	
+	#region Despawn if stuck, this is literally pointless right now 
+	void OnCollisionStay(Collision collision)
+	{
+		stuckTime-=Time.deltaTime;
+		if (stuckTime <= 0)
+		{
+			despawn();
+		}
+	}
+	
+	
+	void despawn()
+	{
+		Destroy(gameObject);
 	}
 	#endregion
 
