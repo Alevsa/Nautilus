@@ -12,7 +12,7 @@ public class OverworldAgressive : MonoBehaviour
 	#region Variables
 	private GameObject focus;
 	private GameObject player;
-	public GameObject pointer;
+	private GameObject pointer;
 	public float turnRate = 0.7f;
 	public float maxSpeed = 10f;
 	private float speed = 0f;
@@ -36,6 +36,7 @@ public class OverworldAgressive : MonoBehaviour
 		// In the same vein will have to have the pointer assigned this way.
 		player = GameObject.FindGameObjectWithTag("Player");
 		body = GetComponent<Rigidbody> ();
+		pointer = gameObject.transform.GetChild(0).gameObject;
 
 		// for the routefinder
 		waypoints = GameObject.FindGameObjectsWithTag("waypoint");
@@ -71,7 +72,7 @@ public class OverworldAgressive : MonoBehaviour
 	}
 	#endregion
 
-	#region Move toward focus
+	#region Move toward focus/waypoint
 	void moveToFocus()
 	{
 		#region Accelerates
@@ -88,7 +89,7 @@ public class OverworldAgressive : MonoBehaviour
 		body.AddRelativeForce (forwardForce);
 		#endregion
 	}
-	#endregion
+	
 
 	public IEnumerator moveToWaypoint()
 	{
@@ -98,7 +99,9 @@ public class OverworldAgressive : MonoBehaviour
 			yield return null;
 		}
 	}
+	#endregion
 	
+	#region Handles collision and arriving at waypoints
 	void OnCollisionEnter(Collision collision)
 	{
 		// Collisions are the only event that can screw up the Y level so this code is here to fix that.
@@ -112,6 +115,7 @@ public class OverworldAgressive : MonoBehaviour
 		StopCoroutine("moveToWaypoint");
 		bored = true;
 	}
+	#endregion
 	
 	#region Idle behavior, patrols the ship around
 	void idle()
