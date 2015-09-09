@@ -2305,19 +2305,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.406967998
+      value: -.406967938
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .268137127
+      value: .268137097
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.416666418
+      value: -.416666359
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .767377853
+      value: .767377734
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_RootOrder
@@ -3541,7 +3541,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421814, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11495706, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
       propertyPath: focus
@@ -5602,82 +5602,60 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 400550502}
---- !u!1 &404939279
-GameObject:
+--- !u!1001 &403367904
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 404939280}
-  - 54: {fileID: 404939282}
-  - 65: {fileID: 404939283}
-  - 114: {fileID: 404939281}
-  m_Layer: 0
-  m_Name: FishingBoat (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &404939280
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 404939279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 746, y: 0, z: 657}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children:
-  - {fileID: 2075572064}
-  - {fileID: 1756710439}
-  - {fileID: 585104636}
-  - {fileID: 1574176362}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
---- !u!114 &404939281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 404939279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fb5ae790811d044926bc7fab78916d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnRate: .699999988
-  maxSpeed: 10
-  visionRange: 50
-  acceleration: .100000001
---- !u!54 &404939282
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 404939279}
   serializedVersion: 2
-  m_Mass: 4
-  m_Drag: 1
-  m_AngularDrag: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &404939283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 404939279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .5, y: .300000012, z: 1.39999998}
-  m_Center: {x: 0, y: -.150000006, z: -.150000006}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 621.940002
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446204, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: spawnDistance
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446204, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: spawnChance
+      value: .00100000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446204, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: maxEnemies
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &405711269
 Prefab:
   m_ObjectHideFlags: 0
@@ -6426,192 +6404,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 377457418}
---- !u!1001 &446801834
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: Flares.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: MountLocations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonLocations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 745.099976
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 647.599976
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonLocations.Array.data[1]
-      value: 
-      objectReference: {fileID: 904570131}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1920520249}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: FireRate
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonPower
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: CannonBackForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.x
-      value: -.00701665878
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.x
-      value: .00720947236
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.y
-      value: .00640075747
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.z
-      value: .0172443353
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.y
-      value: .024181366
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.z
-      value: .0257725939
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.x
-      value: .00650573708
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.z
-      value: .0169780236
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.y
-      value: .00121259689
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Extent.y
-      value: .00641479529
-      objectReference: {fileID: 0}
-    - target: {fileID: 13716286, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.x
-      value: -.00655269623
-      objectReference: {fileID: 0}
-    - target: {fileID: 13791608, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AABB.m_Center.z
-      value: .0233595129
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: Flares.Array.data[0]
-      value: 
-      objectReference: {fileID: 945399051}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: Flares.Array.data[1]
-      value: 
-      objectReference: {fileID: 990227366}
-    - target: {fileID: 191926, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_Name
-      value: WeaponRight
-      objectReference: {fileID: 0}
-    - target: {fileID: 158196, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_Name
-      value: WeaponLeft
-      objectReference: {fileID: 0}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: MountLocations.Array.data[1]
-      value: 
-      objectReference: {fileID: 904570131}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: MountLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1920520249}
-    - target: {fileID: 11426526, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: EquippedWeapon
-      value: 
-      objectReference: {fileID: 100308, guid: e47cbbaa83c94464b892614f65517e47, type: 2}
-    - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: TurnRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: MaxSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11479144, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: Acceleration
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_AngularDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198420, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5477834, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-      propertyPath: m_Mass
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &450687140
 Prefab:
   m_ObjectHideFlags: 0
@@ -7987,1388 +7779,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: eed7c5e5979657b42a8973dbf1aa054d, type: 3}
   m_PrefabInternal: {fileID: 900480878}
---- !u!1 &585104635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100008, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 585104636}
-  - 33: {fileID: 585104638}
-  - 183: {fileID: 585104639}
-  - 137: {fileID: 585104640}
-  m_Layer: 0
-  m_Name: middleSail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &585104636
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400008, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 585104635}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100.000008, z: 100.000008}
-  m_Children: []
-  m_Father: {fileID: 404939280}
-  m_RootOrder: 2
---- !u!33 &585104638
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300006, guid: c0fbf3aef4657e54f88bbe06560652d7,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 585104635}
-  m_Mesh: {fileID: 4300002, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
---- !u!183 &585104639
-Cloth:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 585104635}
-  m_Enabled: 1
-  m_StretchingStiffness: 1
-  m_BendingStiffness: .800000012
-  m_UseTethers: 1
-  m_UseGravity: 0
-  m_Damping: 0
-  m_ExternalAcceleration: {x: 0, y: 0, z: 0}
-  m_RandomAcceleration: {x: 0, y: 0, z: 0}
-  m_WorldVelocityScale: 1
-  m_WorldAccelerationScale: 1
-  m_Friction: 1
-  m_CollisionMassScale: 0
-  m_UseContinuousCollision: 1
-  m_UseVirtualParticles: 1
-  m_SolverFrequency: 120
-  m_SleepThreshold: .100000001
-  m_Coefficients:
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .100000001
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .100000001
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .100000001
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 3.40282347e+38
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .100000001
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .100000001
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00999999978
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: .00100000005
-    collisionSphereDistance: 0
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  - maxDistance: 0
-    collisionSphereDistance: .100000001
-  m_CapsuleColliders: []
-  m_SphereColliders: []
---- !u!137 &585104640
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 585104635}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 36046044439aad4488a2952ef61afd75, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_Mesh: {fileID: 4300002, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1756710439}
-  m_AABB:
-    m_Center: {x: 1.69277191e-05, y: .00238466263, z: .00668887747}
-    m_Extent: {x: .00331542967, y: .00218750024, z: .00602532318}
-  m_DirtyAABB: 0
 --- !u!1001 &598027220
 Prefab:
   m_ObjectHideFlags: 0
@@ -13185,10 +11595,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
   m_PrefabInternal: {fileID: 1951314292}
---- !u!4 &904570131 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 439074, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-  m_PrefabInternal: {fileID: 446801834}
 --- !u!1001 &907977198
 Prefab:
   m_ObjectHideFlags: 0
@@ -13561,12 +11967,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 936456715}
---- !u!114 &945399051 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11431320, guid: d7db1a8f4f0d0e84d88068bcef81a828,
-    type: 2}
-  m_PrefabInternal: {fileID: 1003272532}
-  m_Script: {fileID: 11500000, guid: 37ff6114f6c47a4419f91af0ff2608d9, type: 3}
 --- !u!1001 &946297278
 Prefab:
   m_ObjectHideFlags: 0
@@ -13989,6 +12389,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 662f97b174eb7ee40a99c5416bb17d66, type: 3}
   m_IsPrefabParent: 0
+--- !u!1001 &971464143
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 716.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 667.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496656, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &971607238
 Prefab:
   m_ObjectHideFlags: 0
@@ -14105,12 +12547,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e61eddca11bb9f41aceecd6798c361f, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &990227366 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11411228, guid: 0438351a6e6422d43a09930e9be00ee9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1821637031}
-  m_Script: {fileID: 11500000, guid: 37ff6114f6c47a4419f91af0ff2608d9, type: 3}
 --- !u!1001 &990855066
 Prefab:
   m_ObjectHideFlags: 0
@@ -14370,52 +12806,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
-  m_IsPrefabParent: 0
---- !u!1001 &1003272532
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 904570131}
-    m_Modifications:
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 482256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 107256, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
-      propertyPath: m_Name
-      value: FlareLeft
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d7db1a8f4f0d0e84d88068bcef81a828, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1005639923
 Prefab:
@@ -16016,19 +14406,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.406967998
+      value: -.406967938
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .268137127
+      value: .268137097
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.416666418
+      value: -.416666359
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .767377853
+      value: .767377734
       objectReference: {fileID: 0}
     - target: {fileID: 469680, guid: 2c1d57f1c4671884fbcb8f42983a7aa1, type: 2}
       propertyPath: m_RootOrder
@@ -16711,50 +15101,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 411034, guid: 3b7598d67d7bf564b89b10ac9098fbd7, type: 2}
   m_PrefabInternal: {fileID: 1198441714}
---- !u!1 &1203100818
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1203100819}
-  - 114: {fileID: 1203100820}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1203100819
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1203100818}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1905759293}
-  m_RootOrder: 2
---- !u!114 &1203100820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1203100818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c680cc5367e20dc4e84ecac252ffc0a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnChance: 9.99999975e-06
-  spawnDistance: 100
-  maxEnemies: 4
-  enemies:
-  - {fileID: 176516, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
 --- !u!1001 &1205887497
 Prefab:
   m_ObjectHideFlags: 0
@@ -20041,7 +18387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 434354, guid: 1a164dedf77cf7545a4b62be362fdf87, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11431348, guid: 1a164dedf77cf7545a4b62be362fdf87, type: 2}
       propertyPath: _lengthOfDay
@@ -22228,33 +20574,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f26273aefdcf901408463c6eaeea6c64, type: 3}
   m_PrefabInternal: {fileID: 1411659568}
---- !u!1 &1574176358
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 198888, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1574176362}
-  m_Layer: 0
-  m_Name: pointer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1574176362
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 489912, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1574176358}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9229736, y: -.579999983, z: 68.8569946}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 404939280}
-  m_RootOrder: 3
 --- !u!1001 &1575929119
 Prefab:
   m_ObjectHideFlags: 0
@@ -24354,68 +22673,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 1753680296}
---- !u!1 &1756710438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100006, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1756710439}
-  - 33: {fileID: 1756710441}
-  - 23: {fileID: 1756710440}
-  m_Layer: 0
-  m_Name: mainMast
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1756710439
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400006, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1756710438}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100.000008, z: 100.000008}
-  m_Children: []
-  m_Father: {fileID: 404939280}
-  m_RootOrder: 1
---- !u!23 &1756710440
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300004, guid: c0fbf3aef4657e54f88bbe06560652d7,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1756710438}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 49b84dc6f50b6fa438893253bad60b16, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1756710441
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300004, guid: c0fbf3aef4657e54f88bbe06560652d7,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1756710438}
-  m_Mesh: {fileID: 4300004, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
 --- !u!1 &1757055772 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 156690, guid: 3480a3550b5f8af4381a3d2d99790f06, type: 2}
@@ -25457,52 +23714,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 662f97b174eb7ee40a99c5416bb17d66, type: 3}
-  m_IsPrefabParent: 0
---- !u!1001 &1821637031
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1920520249}
-    m_Modifications:
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 6.49799986e-05
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -.999446213
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -.00498461537
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .0329019353
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
-      propertyPath: m_Name
-      value: FlareRight
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1825366495
 Prefab:
@@ -26556,81 +24767,12 @@ Transform:
   m_PrefabInternal: {fileID: 1899497861}
 --- !u!1 &1905759292 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 198420, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-  m_PrefabInternal: {fileID: 446801834}
+  m_PrefabParentObject: {fileID: 142944, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+  m_PrefabInternal: {fileID: 403367904}
 --- !u!4 &1905759293 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 452614, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-  m_PrefabInternal: {fileID: 446801834}
---- !u!82 &1905759298
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905759292}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: .472000003
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+  m_PrefabParentObject: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+  m_PrefabInternal: {fileID: 403367904}
 --- !u!1001 &1908547344
 Prefab:
   m_ObjectHideFlags: 0
@@ -26817,10 +24959,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7ae861cd987d8a546b59efd03441b07c, type: 3}
   m_PrefabInternal: {fileID: 1920500385}
---- !u!4 &1920520249 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 428270, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
-  m_PrefabInternal: {fileID: 446801834}
 --- !u!1001 &1923514689
 Prefab:
   m_ObjectHideFlags: 0
@@ -28677,71 +26815,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 2074179147}
---- !u!1 &2075572063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2075572064}
-  - 33: {fileID: 2075572066}
-  - 23: {fileID: 2075572065}
-  m_Layer: 0
-  m_Name: hull
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2075572064
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2075572063}
-  m_LocalRotation: {x: .70710659, y: 0, z: 0, w: -.707106948}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100.000008, z: 100.000008}
-  m_Children: []
-  m_Father: {fileID: 404939280}
-  m_RootOrder: 0
---- !u!23 &2075572065
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300002, guid: c0fbf3aef4657e54f88bbe06560652d7,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2075572063}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 5027b6dcfd5d46845b98581f6411a860, type: 2}
-  - {fileID: 2100000, guid: b49a72bd44873fe4e9edd97da310ece2, type: 2}
-  - {fileID: 2100000, guid: fe6597cc92839bb45bdc0885eb79efae, type: 2}
-  - {fileID: 2100000, guid: 550b3067c0985be42a14a8a8dbebaeca, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &2075572066
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300002, guid: c0fbf3aef4657e54f88bbe06560652d7,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2075572063}
-  m_Mesh: {fileID: 4300006, guid: c0fbf3aef4657e54f88bbe06560652d7, type: 3}
 --- !u!1001 &2076450110
 Prefab:
   m_ObjectHideFlags: 0

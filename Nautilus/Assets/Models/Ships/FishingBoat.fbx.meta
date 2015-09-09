@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c0fbf3aef4657e54f88bbe06560652d7
-timeCreated: 1441780138
+timeCreated: 1441812510
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -8,24 +8,24 @@ ModelImporter:
     100000: Chest
     100002: //RootNode
     100004: hull
-    100006: mainMast
-    100008: middleSail
+    100006: NewMast
+    100008: newSail
     400000: Chest
     400002: //RootNode
     400004: hull
-    400006: mainMast
-    400008: middleSail
+    400006: NewMast
+    400008: newSail
     2300000: Chest
     2300002: hull
-    2300004: mainMast
-    2300006: middleSail
+    2300004: NewMast
+    2300006: newSail
     3300000: Chest
     3300002: hull
-    3300004: mainMast
-    3300006: middleSail
-    4300000: Chest
-    4300002: middleSail
-    4300004: mainMast
+    3300004: NewMast
+    3300006: newSail
+    4300000: newSail
+    4300002: NewMast
+    4300004: Chest
     4300006: hull
   materials:
     importMaterials: 1
