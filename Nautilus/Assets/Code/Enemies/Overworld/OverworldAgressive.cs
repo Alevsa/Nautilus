@@ -171,11 +171,12 @@ public class OverworldAgressive : MonoBehaviour
 	}
 	#endregion
 	
+	
 	IEnumerable fadeIn()
 	{
 		for (float i = 0; i<3f; i+=Time.deltaTime)
 		{
-			
+			yield return null;		
 		}
 	}
 	
