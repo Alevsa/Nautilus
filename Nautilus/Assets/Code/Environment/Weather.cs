@@ -9,7 +9,7 @@ public class Weather : MonoBehaviour
 	public float chanceForWeather = 0.001f;
 	public float fadeRate = 1f;
 	private bool active = false;
-	
+/*	
 	void Start()
 	{
 		for (int i = 0; i < gameObject.transform.GetChildCount(); i++)
@@ -29,6 +29,7 @@ public class Weather : MonoBehaviour
 		}
 	}
 	
+	#region Routlette selection for a weather effect
 	WeatherEffect weatherRoulette()
 	{
 		float totalProbability = 0;
@@ -47,9 +48,11 @@ public class Weather : MonoBehaviour
 			} 
 		}
 	}
+	#endregion
 	
 	IEnumerator fadeEffect(WeatherEffect effect, bool fadingIn)
 	{
 		while (effect.effect.get < effect.maxParticles )
-	}	
+	}
+	*/	
 }
