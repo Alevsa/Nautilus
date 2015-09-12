@@ -9,7 +9,7 @@ public class Weather : MonoBehaviour
 	public float chanceForWeather = 0.001f;
 	public float fadeRate = 1f;
 	private bool active = false;
-/*	
+	
 	void Start()
 	{
 		for (int i = 0; i < gameObject.transform.GetChildCount(); i++)
@@ -52,7 +52,7 @@ public class Weather : MonoBehaviour
 	
 	IEnumerator fadeEffect(WeatherEffect effect, bool fadingIn)
 	{
-		while (effect.effect.get < effect.maxParticles )
+		while (effect.effect.GetComponent(ParticleSystem) < effect.maxParticles )
 	}
-	*/	
+		
 }
