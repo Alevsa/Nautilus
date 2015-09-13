@@ -5,17 +5,19 @@ using System.Collections.Generic;
 public class Weather : MonoBehaviour 
 {
 	public GameObject focus; // The player most likely
-	private List<WeatherEffect> weatherEffects;
 	public float chanceForWeather = 0.001f;
 	public float fadeRate = 1f;
+	public float duration = 60f;
+	public WeatherEffect[] weatherEffects;
 	private bool active = false;
 	
 	void Start()
 	{
-		for (int i = 0; i < gameObject.transform.GetChildCount(); i++)
+		weatherEffects = GetComponentsInChildren<WeatherEffect>(true);
+		// Placeholder for durations not decided exactly what I want to do here.
+		foreach (WeatherEffect effect in weatherEffects)
 		{
-			GameObject x = gameObject.transform.GetChild(i);
-			weatherEffects.Add(x.GetComponent<WeatherEffect>());
+			effect.duration = duration;	
 		}
 	}
 	
@@ -23,9 +25,8 @@ public class Weather : MonoBehaviour
 	{
 		if (Random.value < chanceForWeather && !active)
 		{
-			WeatherEffect active = weatherRoulette();
-			
-			active.effect.SetActive = true;
+			WeatherEffect activeEffect = weatherRoulette();
+			activeEffect.hello.SetActive(true);
 		}
 	}
 	
@@ -47,12 +48,18 @@ public class Weather : MonoBehaviour
 				return effect;
 			} 
 		}
+		return weatherEffects[0];
 	}
 	#endregion
 	
 	IEnumerator fadeEffect(WeatherEffect effect, bool fadingIn)
 	{
-		while (effect.effect.GetComponent(ParticleSystem) < effect.maxParticles )
+		while (effect.emitter.maxEmission < effect.maxParticles)
+		{
+			effect.emitter.maxEmission += fadeRate;
+			yield return null;
+		}
 	}
+	
 		
 }
