@@ -6,6 +6,7 @@ public class WeatherEffect : MonoBehaviour
 	public float probability;
 	public float maxVolume;
 	public float duration;
+	public float fadeTime = 5f;
 	[HideInInspector] public AudioSource audio;
 	[HideInInspector] public GameObject hello;
 	[HideInInspector] public ParticleEmitter emitter;
@@ -23,5 +24,18 @@ public class WeatherEffect : MonoBehaviour
 		hello = gameObject;
 		Debug.Log("This gameObject is: " + hello); // <= this works
 		emitter.maxEmission = 0f;
+	}
+	
+	void Start()
+	{
+		fadein();
+	}
+	
+	IEnumerable fadein()
+	{
+		while (emitter.maxEmission < maxParticles)
+		{
+			emitter.maxEmission += fadeTime * Time.deltaTime;
+		}
 	}
 }
