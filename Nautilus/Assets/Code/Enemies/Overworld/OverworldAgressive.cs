@@ -10,6 +10,8 @@ public class OverworldAgressive : MonoBehaviour
 	// ? ? ?
 	
 	#region Variables
+	public string[] battleScenes;
+	public GameObject enemy;
 	private GameObject focus;
 	private GameObject player;
 	private GameObject pointer;
@@ -115,6 +117,11 @@ public class OverworldAgressive : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
+		if (other.gameObject.tag == "Player")
+		{
+			string scene = battleScenes[UnityEngine.Random.Range(0,battleScenes.Length)];
+			Application.LoadLevel(scene);
+		}
 		StopCoroutine("moveToWaypoint");
 		bored = true;
 	}

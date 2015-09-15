@@ -2281,6 +2281,10 @@ Prefab:
       propertyPath: hello
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 158920, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a5cf37e5374bef4886734defd0bc5b9, type: 2}
   m_IsPrefabParent: 0
@@ -5579,7 +5583,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 750
+      value: 716.400024
       objectReference: {fileID: 0}
     - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5587,7 +5591,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 621.940002
+      value: 679.5
       objectReference: {fileID: 0}
     - target: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5620,6 +5624,30 @@ Prefab:
     - target: {fileID: 11446204, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
       propertyPath: maxEnemies
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 13764730, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.z
+      value: .0233595129
+      objectReference: {fileID: 0}
+    - target: {fileID: 13796718, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.z
+      value: .0257725958
+      objectReference: {fileID: 0}
+    - target: {fileID: 13764730, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.y
+      value: .00121259689
+      objectReference: {fileID: 0}
+    - target: {fileID: 13796718, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.y
+      value: .024181366
+      objectReference: {fileID: 0}
+    - target: {fileID: 13796718, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.x
+      value: -.00655269623
+      objectReference: {fileID: 0}
+    - target: {fileID: 13764730, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
+      propertyPath: m_AABB.m_Center.x
+      value: -.00701665878
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
@@ -24741,6 +24769,19 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 444680, guid: c4863f4e0a5a8fd47ad6ba1672facce0, type: 2}
   m_PrefabInternal: {fileID: 403367904}
+--- !u!136 &1905759299
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1905759292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -.850000024}
 --- !u!1001 &1908547344
 Prefab:
   m_ObjectHideFlags: 0

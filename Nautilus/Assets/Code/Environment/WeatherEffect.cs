@@ -18,16 +18,12 @@ public class WeatherEffect : MonoBehaviour
 	{
 		emitter = gameObject.GetComponent<ParticleEmitter>();
 		maxParticles = emitter.maxEmission;
-		Debug.Log("This gameObject is: " + this.gameObject); // <= this works
-		Debug.Log("This gameObject is: " + gameObject); // <= this works
-		Debug.Log("This gameObject is: " + hello); // <= this works
 		hello = gameObject;
-		Debug.Log("This gameObject is: " + hello); // <= this works
-		emitter.maxEmission = 0f;
 	}
 	
 	void Start()
 	{
+		emitter.maxEmission = 0f;
 		fadein();
 	}
 	
@@ -36,6 +32,7 @@ public class WeatherEffect : MonoBehaviour
 		while (emitter.maxEmission < maxParticles)
 		{
 			emitter.maxEmission += fadeTime * Time.deltaTime;
+			yield return null;
 		}
 	}
 }
