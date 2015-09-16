@@ -13,6 +13,7 @@ public class Weather : MonoBehaviour
 	
 	void Start()
 	{
+		DontDestroyOnLoad(gameObject);
 		weatherEffects = GetComponentsInChildren<WeatherEffect>(true);
 		// Placeholder for durations not decided exactly what I want to do here.
 		foreach (WeatherEffect effect in weatherEffects)

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - waypoint
   - weather
-  - New Tag
+  - PlayerBattle
   layers:
   - Default
   - TransparentFX

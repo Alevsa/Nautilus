@@ -20850,6 +20850,26 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f877fd5859b1a9c4880bbc8ab8285531, type: 3}
   m_PrefabInternal: {fileID: 1590725009}
+--- !u!1 &1590790584 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 176516, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
+  m_PrefabInternal: {fileID: 971464143}
+--- !u!114 &1590790590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1590790584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1daf1ed9a5ba45b48961ab6dd4c4a1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleScenes:
+  - BattleSceneTEst
+  enemies:
+  - {fileID: 100000, guid: 6e62fbba86dd14440b505e6aefc92837, type: 3}
+  spawnDistance: 200
 --- !u!1001 &1592236085
 Prefab:
   m_ObjectHideFlags: 0

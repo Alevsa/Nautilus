@@ -18,9 +18,14 @@ public class DayNightCycle : MonoBehaviour
 	private Light sun;
 	private Light moon;
 	#endregion
-
+	
+	void OnLevelWasLoaded()
+	{
+		
+	}
 	void Start()
 	{
+		DontDestroyOnLoad(gameObject);
 		maxMoonIntensity = _maxMoonIntensity/2f;
 		maxSunIntensity = _maxSunIntensity/2f;
 
