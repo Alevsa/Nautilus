@@ -73,7 +73,7 @@ public class CameraControlNew : MonoBehaviour {
 		Vector3 projectionXZ = new Vector3 (newPosition.x, 0f, newPosition.z);
 
 		Vector3 perpXZ = new Vector3 (-projectionXZ.z, 0f, projectionXZ.x).normalized;
-		Debug.Log (projectionXZ + " : " + perpXZ);
+//		Debug.Log (projectionXZ + " : " + perpXZ);
 
 		Vector3 cross = Vector3.Cross (newPosition * amount, perpXZ);
 

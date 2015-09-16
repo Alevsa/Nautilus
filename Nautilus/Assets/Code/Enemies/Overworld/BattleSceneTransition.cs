@@ -17,13 +17,21 @@ public class BattleSceneTransition : MonoBehaviour
 			DontDestroyOnLoad(gameObject);
 			newScene = true;
 			Application.LoadLevel(scene);
+		}
+	}
+	
+	void OnLevelWasLoaded()
+	{
+		Debug.Log("Loaded Level");
+		if (newScene)
+		{
 			player = GameObject.FindGameObjectWithTag("PlayerBattle");
 			foreach (GameObject enemy in enemies)
 			{
 				Debug.Log("Spawning enemy");
 				spawnEnemy(enemy);
 			}
-			//Destroy(gameObject);
+			Destroy(gameObject);
 		}
 	}
 	
