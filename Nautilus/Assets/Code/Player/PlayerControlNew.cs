@@ -76,6 +76,11 @@ public class PlayerControlNew : MonoBehaviour {
 			m_CamControl.HandleMouseX(x);
 			m_CamControl.HandleMouseY(y);
         }
+
+		if (Input.GetMouseButtonUp(1))
+		{
+			m_CamControl.Unbind();
+		}
     }
 	
 }

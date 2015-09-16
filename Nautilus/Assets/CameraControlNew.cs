@@ -12,6 +12,7 @@ public class CameraControlNew : MonoBehaviour {
 	public Vector3 newPosition;
 
 	private bool bControlled = false;
+	private Vector3 behindPosition;
 
 	// Use this for initialization
 	void Start () 
@@ -21,15 +22,10 @@ public class CameraControlNew : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//if (!bControlled)
-		//	GetBehind ();
+		if (!bControlled)
+			GetBehind ();
 	}
-
-	void LateUpdate()
-	{
-		//bControlled = false;
-	}
-
+	
 	public void ChangeZoom (int positive)
 	{
 		if (positive > 0)
@@ -56,6 +52,11 @@ public class CameraControlNew : MonoBehaviour {
 	{
 			OrbitYZ (amount);
 			bControlled = true;
+	}
+
+	public void Unbind ()
+	{
+		bControlled = false;
 	}
 
 	public void OrbitXZ (float amount)
@@ -86,6 +87,8 @@ public class CameraControlNew : MonoBehaviour {
 
 	public void GetBehind()
 	{
-		//OrbitXZ (1f);
+//		behindPosition = new Vector3 (0F, newPosition.y, newPosition.z - Mathf.Abs(newPosition.x));
+//		behindPosition = cameraFollow.Target.transform.TransformPoint (behindPosition);
+//		newPosition = Vector3.MoveTowards(newPosition, behindPosition - cameraFollow.Target.transform.position, 0.1F);
 	}
 }
