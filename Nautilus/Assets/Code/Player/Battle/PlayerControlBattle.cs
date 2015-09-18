@@ -19,7 +19,7 @@ public class PlayerControlBattle : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		handlerMovement = Ship.GetComponent<PlayerShipMovement>();
+//		handlerMovement = Ship.GetComponent<PlayerShipMovement>();
 		m_CamControl = GameObject.Find("Main Camera").GetComponent<CameraControlNew>();
 		m_WeapControl = Ship.GetComponent<WeaponController>();
 		
