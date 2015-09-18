@@ -91,15 +91,15 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484484}
-  - 114: {fileID: 11479574}
-  - 114: {fileID: 11401740}
   - 54: {fileID: 5491012}
-  - 114: {fileID: 11489902}
   - 82: {fileID: 8274586}
   - 136: {fileID: 13687392}
+  - 114: {fileID: 11451022}
+  - 114: {fileID: 11437128}
+  - 114: {fileID: 11414352}
   m_Layer: 0
   m_Name: PlayerBattle
-  m_TagString: Player
+  m_TagString: PlayerBattle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,7 +522,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11401740
+--- !u!114 &11414352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -530,10 +530,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 147020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 035a8c3564ea2744cb15c5887b7fe972, type: 3}
+  m_Script: {fileID: 11500000, guid: a77b55fda98710f43a9c3dd926a130ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipStats: {fileID: 11479574}
+  EquippedWeapon: {fileID: 100308, guid: e47cbbaa83c94464b892614f65517e47, type: 2}
+  MountLocations:
+  - {fileID: 484484}
+  Flares:
+  - {fileID: 11497220}
+  - {fileID: 11464792}
 --- !u!114 &11431212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,6 +552,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SparkDuration: .200000003
   SmokeDuration: .600000024
+--- !u!114 &11437128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1f8c4f710dc8f449c3e1f53354e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipStats: {fileID: 0}
+--- !u!114 &11451022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a477f3f0fc7d02341ab40012d3805dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSpeed: 0
+  Acceleration: 0
+  TurnRate: 0
+  Health: 0
 --- !u!114 &11464792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -560,39 +592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SparkDuration: .200000003
   SmokeDuration: .600000024
---- !u!114 &11479574
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43c4bb114d9b59a42af2b69088dfc932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxSpeed: 15
-  Acceleration: 5
-  TurnRate: 1
-  Health: 1000
---- !u!114 &11489902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77b55fda98710f43a9c3dd926a130ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EquippedWeapon: {fileID: 100308, guid: e47cbbaa83c94464b892614f65517e47, type: 2}
-  MountLocations:
-  - {fileID: 410454}
-  - {fileID: 431042}
-  Flares:
-  - {fileID: 11464792}
-  - {fileID: 11431212}
 --- !u!114 &11497220
 MonoBehaviour:
   m_ObjectHideFlags: 1
