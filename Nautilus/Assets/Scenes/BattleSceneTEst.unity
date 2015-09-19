@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1f8c4f710dc8f449c3e1f53354e597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipStats: {fileID: 256168769}
+  Ship: {fileID: 256168765}
 --- !u!4 &1599976131
 Transform:
   m_ObjectHideFlags: 0
@@ -254,6 +254,26 @@ Prefab:
       propertyPath: shipStats
       value: 
       objectReference: {fileID: 256168769}
+    - target: {fileID: 11437128, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
+      propertyPath: Ship
+      value: 
+      objectReference: {fileID: 256168765}
+    - target: {fileID: 11451022, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
+      propertyPath: MaxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451022, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
+      propertyPath: Acceleration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451022, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
+      propertyPath: TurnRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451022, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
   m_IsPrefabParent: 0

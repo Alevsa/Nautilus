@@ -19,9 +19,12 @@ public class PlayerControlBattle : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-//		handlerMovement = Ship.GetComponent<PlayerShipMovement>();
+		Debug.Log(handlerMovement);
+		handlerMovement = Ship.GetComponent<ShipControlBattle>();
 		m_CamControl = GameObject.Find("Main Camera").GetComponent<CameraControlNew>();
 		m_WeapControl = Ship.GetComponent<WeaponController>();
+		Debug.Log(handlerMovement);
+		
 		
 		// m_smoothFollow = GameObject.Find("Main Camera").GetComponent<SmoothFollow>();
 		// m_RotDamping = m_smoothFollow.RotationDamping;
