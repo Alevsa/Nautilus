@@ -17,7 +17,8 @@ public class CameraControlNew : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		newPosition = this.transform.position - cameraFollow.Target.transform.position;
+		//newPosition = this.transform.position - cameraFollow.Target.transform.position;
+		newPosition = new Vector3 (MinZoom, MinZoom, MinZoom);
 	}
 	
 	// Update is called once per frame
