@@ -12,16 +12,4 @@ public class ShipStats : MonoBehaviour
 	{
 		DontDestroyOnLoad(gameObject);
 	}
-	
-	void OnLevelWasLoaded()
-	{
-		if (Application.loadedLevelName == "Overworld")
-		{
-			gameObject.SetActive(true);
-		}
-		else 
-		{
-			gameObject.SetActive(false);
-		}
-	}
 }

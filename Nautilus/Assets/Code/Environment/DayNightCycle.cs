@@ -23,6 +23,7 @@ public class DayNightCycle : MonoBehaviour
 	{
 		
 	}
+	
 	void Start()
 	{
 		DontDestroyOnLoad(gameObject);

@@ -22,13 +22,11 @@ public class BattleSceneTransition : MonoBehaviour
 	
 	void OnLevelWasLoaded()
 	{
-		Debug.Log("Loaded Level");
 		if (newScene)
 		{
 			player = GameObject.FindGameObjectWithTag("PlayerBattle");
 			foreach (GameObject enemy in enemies)
 			{
-				Debug.Log("Spawning enemy");
 				spawnEnemy(enemy);
 			}
 			Destroy(gameObject);
@@ -44,6 +42,5 @@ public class BattleSceneTransition : MonoBehaviour
 		float z = spawnDistance*Mathf.Cos(angle);
 		Vector3 spawnPosition = player.transform.position + new Vector3(x, 0, z);
 		Instantiate(enemy, spawnPosition, Quaternion.identity);
-		Debug.Log("Enemy should be there");
 	}
 }

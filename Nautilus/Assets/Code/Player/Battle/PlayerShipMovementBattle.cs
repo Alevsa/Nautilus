@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShipControlBattle : MonoBehaviour 
+public class PlayerShipMovementBattle : MonoBehaviour 
 {
 	public ShipStatsBattle shipStats;
 	
@@ -11,8 +11,7 @@ public class ShipControlBattle : MonoBehaviour
 	private float turn;
 	
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 		shipStats = GetComponent<ShipStatsBattle> ();
 		body = GetComponent<Rigidbody> ();
 	}

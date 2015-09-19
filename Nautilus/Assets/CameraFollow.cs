@@ -7,11 +7,15 @@ public class CameraFollow : MonoBehaviour {
 	public CameraControlNew cameraControl;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{		
+		Target = GameObject.FindGameObjectWithTag("Player");
+		Debug.Log("My target is " + Target);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		this.transform.position = Target.transform.position + cameraControl.newPosition;
 
 		Vector3 direction = (Target.transform.position - this.transform.position).normalized;

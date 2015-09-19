@@ -91,12 +91,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484484}
-  - 54: {fileID: 5491012}
-  - 82: {fileID: 8274586}
-  - 136: {fileID: 13687392}
   - 114: {fileID: 11451022}
   - 114: {fileID: 11437128}
+  - 54: {fileID: 5491012}
   - 114: {fileID: 11414352}
+  - 82: {fileID: 8274586}
+  - 136: {fileID: 13687392}
   m_Layer: 0
   m_Name: PlayerBattle
   m_TagString: PlayerBattle
@@ -563,7 +563,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1f8c4f710dc8f449c3e1f53354e597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipStats: {fileID: 0}
+  Ship: {fileID: 147020}
+  handlerMovement: {fileID: 0}
+  m_CamControl: {fileID: 0}
+  m_WeapControl: {fileID: 0}
+  inMenu: 0
+  shipAlive: 1
+  m_RotDamping: 0
 --- !u!114 &11451022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,10 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477f3f0fc7d02341ab40012d3805dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 0
-  Acceleration: 0
-  TurnRate: 0
-  Health: 0
+  MaxSpeed: 1
+  Acceleration: 1
+  TurnRate: 1
+  Health: 1
 --- !u!114 &11464792
 MonoBehaviour:
   m_ObjectHideFlags: 1
