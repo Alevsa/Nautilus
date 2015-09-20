@@ -20,8 +20,14 @@ public class CameraController : MonoBehaviour
         m_smoothFollow = GetComponent<SmoothFollow>();
         m_MinY = MinZoom + 18;
         m_MaxY = MaxZoom + 26;
-
-        player = GameObject.Find("Player").transform;
+		if (Application.loadedLevelName == "Overworld")
+		{
+        	player = GameObject.Find("Player").transform;
+        }
+        else 
+        {
+			player = GameObject.Find("PlayerBattle").transform;
+        }
 	}
 
     public void AdjustZoom(float zoom)

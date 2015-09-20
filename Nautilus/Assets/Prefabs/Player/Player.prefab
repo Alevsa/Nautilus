@@ -15,22 +15,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &124956
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 496678}
-  - 114: {fileID: 11446204}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &140348
 GameObject:
   m_ObjectHideFlags: 1
@@ -62,6 +46,7 @@ GameObject:
   - 54: {fileID: 5451974}
   - 114: {fileID: 11479738}
   - 82: {fileID: 8251132}
+  - 136: {fileID: 13635024}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -285,11 +270,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 750, y: 0, z: 621.940002}
+  m_LocalPosition: {x: 716.400024, y: 0, z: 679.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436298}
-  - {fileID: 496678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &452700
@@ -404,18 +388,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 436298}
   m_RootOrder: 2
---- !u!4 &496678
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 444680}
-  m_RootOrder: 1
 --- !u!23 &2316038
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -575,22 +547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipStats: {fileID: 11457230}
---- !u!114 &11446204
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c680cc5367e20dc4e84ecac252ffc0a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnChance: 9.99999975e-06
-  spawnDistance: 100
-  maxEnemies: 4
-  enemies:
-  - {fileID: 176516, guid: b5ff6c68e68bac04cb12e19b9d39d8ce, type: 2}
 --- !u!114 &11457230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,6 +606,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SparkDuration: .200000003
   SmokeDuration: .600000024
+--- !u!136 &13635024
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 5
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -.850000024}
 --- !u!137 &13764730
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

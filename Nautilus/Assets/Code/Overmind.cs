@@ -40,12 +40,11 @@ public class Overmind : MonoBehaviour
 	{
 		if (Application.loadedLevelName == "Overworld")
 		{
-			gameObject.SetActive(true);
+			overworldPlayer.SetActive(true);
 		}
 		else 
 		{
-			gameObject.SetActive(false);
-			Debug.Log("Disabled");
+			overworldPlayer.SetActive(false);
 		}
 	}
 	#endregion

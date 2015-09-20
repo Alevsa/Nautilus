@@ -9,8 +9,14 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{		
-		Target = GameObject.FindGameObjectWithTag("Player");
-		Debug.Log("My target is " + Target);
+		if (Application.loadedLevelName == "Overworld")
+		{
+			Target = GameObject.FindGameObjectWithTag("Player");
+		}
+		else 
+		{
+			Target = GameObject.FindGameObjectWithTag("PlayerBattle");
+		}
 	}
 	
 	// Update is called once per frame
