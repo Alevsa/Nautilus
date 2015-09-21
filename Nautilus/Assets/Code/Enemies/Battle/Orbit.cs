@@ -22,10 +22,11 @@ public class Orbit : MonoBehaviour
 	{
 		
 		float distance = distanceFromPlayer();
+		#region Get closer if too far away, move away when too close and orbit when in between.
 		if (distance > maxOrbitRange)
 		{
 			pointer.transform.LookAt(target.transform);
-			alterDistance(pointer.transform);
+			move(pointer.transform);
 		}
 		else if (distance < minOrbitRange)
 		{
@@ -33,22 +34,20 @@ public class Orbit : MonoBehaviour
 			pointer.transform.LookAt(target.transform);
 			Transform opposite = pointer.transform;
 			opposite.Rotate(180f * Vector3.up); 	
-			alterDistance(opposite);
+			move(opposite);
 		}
 		else 
 		{
-			rotateAround();	
+			pointer.transform.LookAt(target.transform);
+			Transform tangent = pointer.transform;
+			tangent.Rotate(90f * Vector3.up); 
+			move(tangent);	
 		}
 	}
-	
-	#region Orbit
-	void rotateAround()
-	{
-		transform.RotateAround(target.transform.position, Vector3.up, speed*Time.deltaTime);
-	}
 	#endregion
+	
 	#region Get close enough to orbit
-	void alterDistance(Transform target)
+	void move(Transform target)
 	{
 		gameObject.transform.rotation = Quaternion.RotateTowards(gameObject.transform.rotation, target.rotation, turnRate);
 		Vector3 forwardForce = Vector3.forward * speed;
