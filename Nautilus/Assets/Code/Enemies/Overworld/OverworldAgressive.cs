@@ -37,7 +37,14 @@ public class OverworldAgressive : MonoBehaviour
 		// In the same vein will have to have the pointer assigned this way.
 		player = GameObject.FindGameObjectWithTag("Player");
 		body = GetComponent<Rigidbody> ();
-		pointer = gameObject.transform.GetChild(0).gameObject;
+		for (int i = 0; i<transform.childCount; i++)
+		{	
+			GameObject obj = transform.GetChild(i).gameObject;
+			if (obj.tag == "Pointer")
+			{
+				pointer = obj;
+			}
+		}
 
 		// for the routefinder
 		waypoints = GameObject.FindGameObjectsWithTag("waypoint");

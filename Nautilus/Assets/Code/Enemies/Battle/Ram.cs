@@ -5,6 +5,9 @@ public class Ram : MonoBehaviour {
 
 	public GameObject focus;
 	public float maxSpeed;
+	private float distance;
+	public float chargeDistance;
+	
 	void Start () 
 	{
 		shouldICharge();
@@ -16,10 +19,14 @@ public class Ram : MonoBehaviour {
 		shouldICharge();
 	}
 
-	void getIntoPosition()
+	IEnumerable getIntoPosition()
 	{
 		// Get into position
-		charge();
+		while (distance < chargeDistance)
+		{
+			// move away
+			yield return null;
+		}
 	}
 
 	void shouldICharge()

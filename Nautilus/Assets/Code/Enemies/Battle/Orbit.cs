@@ -15,7 +15,14 @@ public class Orbit : MonoBehaviour
 	{
 		body = GetComponent<Rigidbody> ();
 		target = GameObject.FindGameObjectWithTag("PlayerBattle");
-		pointer = gameObject.transform.GetChild(0).gameObject;
+		for (int i = 0; i<transform.childCount; i++)
+		{	
+			GameObject obj = transform.GetChild(i).gameObject;
+			if (obj.tag == "Pointer")
+			{
+				pointer = obj;
+			}
+		}
 	}
 	
 	void Update () 
@@ -23,19 +30,21 @@ public class Orbit : MonoBehaviour
 		
 		float distance = distanceFromPlayer();
 		#region Get closer if too far away, move away when too close and orbit when in between.
+		// Move toward target
 		if (distance > maxOrbitRange)
 		{
 			pointer.transform.LookAt(target.transform);
 			move(pointer.transform);
 		}
+		// Move away from target
 		else if (distance < minOrbitRange)
 		{
-			// Needs to look away from the target
 			pointer.transform.LookAt(target.transform);
 			Transform opposite = pointer.transform;
 			opposite.Rotate(180f * Vector3.up); 	
 			move(opposite);
 		}
+		// Orbit
 		else 
 		{
 			pointer.transform.LookAt(target.transform);
@@ -46,7 +55,7 @@ public class Orbit : MonoBehaviour
 	}
 	#endregion
 	
-	#region Get close enough to orbit
+	#region Moves the object
 	void move(Transform target)
 	{
 		gameObject.transform.rotation = Quaternion.RotateTowards(gameObject.transform.rotation, target.rotation, turnRate);
