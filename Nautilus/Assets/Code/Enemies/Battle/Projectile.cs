@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
 		Vector3 forwardForce = Vector3.forward * speed;
 		body.AddRelativeForce (forwardForce);
 	
-		if (gameObject.transform.position.y < -200f)
+		if (gameObject.transform.position.y < -20f)
 		{
 			Destroy(gameObject);
 		}

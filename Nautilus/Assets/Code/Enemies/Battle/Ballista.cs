@@ -9,7 +9,7 @@ public class Ballista : MonoBehaviour
 	public float range = 10f;
 	public float turnRate = 0.8f;
 	public float cooldown = 5f;
-	private float _cooldown;
+	public float _cooldown;
 	private bool onCooldown = false;
 	
 	void Start () 
@@ -28,13 +28,8 @@ public class Ballista : MonoBehaviour
 
 	void Update () 
 	{
-		if (_cooldown <= 0)
-		{
-			onCooldown = false;
-			_cooldown = cooldown;
-		}
+		checkCooldown();	
 		rotateTurret();
-		
 		if (iShouldShoot() && !onCooldown)
 		{
 			shoot();
@@ -45,23 +40,30 @@ public class Ballista : MonoBehaviour
 	{
 		pointer.transform.LookAt(target);
 		gameObject.transform.rotation = Quaternion.RotateTowards(gameObject.transform.rotation, pointer.transform.rotation, turnRate);
-		gameObject.transform.LookAt(target);
-
 	}
 	
 	bool iShouldShoot()
 	{	
-		return Physics.Raycast(transform.position, Vector3.forward, range);
+		return Physics.Raycast(transform.position, gameObject.transform.forward, range);
 	}
 	
 	void shoot()
 	{
 		Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 		onCooldown = true;
-		setCooldown();
+		StartCoroutine("setCooldown");
 	}	
 	
-	IEnumerable setCooldown()
+	void checkCooldown()
+	{
+		if (_cooldown <= 0f)
+		{
+			onCooldown = false;
+			_cooldown = cooldown;
+		}
+	}
+	
+	public IEnumerator setCooldown()
 	{
 		while (_cooldown > 0f)
 		{
