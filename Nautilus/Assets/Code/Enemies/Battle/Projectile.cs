@@ -12,6 +12,11 @@ public class Projectile : MonoBehaviour
 		body = GetComponent<Rigidbody> ();
 	}
 	
+	void OnCollisionEnter(Collision collision)
+	{
+		explode();
+	}
+	
 	void Update()
 	{
 		Vector3 forwardForce = Vector3.forward * speed;
@@ -22,6 +27,11 @@ public class Projectile : MonoBehaviour
 			Destroy(gameObject);
 		}
 		
+	}
+	void explode()
+	{
+		Destroy(gameObject);
+		// insert particles here
 	}
 	
 }

@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71189499, y: -4.24683714, z: 3.98627281}
+  m_LocalPosition: {x: -6.57605696, y: -70.8000031, z: -11.5603771}
   m_LocalScale: {x: .244022727, y: .24402307, z: .24402307}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70,7 +70,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105980}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .00999999978
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb43f3f533b99d409eb6d0065da13a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 1
   lifeTime: 0
 --- !u!135 &13599218
 SphereCollider:

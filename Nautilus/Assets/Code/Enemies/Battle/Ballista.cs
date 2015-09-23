@@ -9,7 +9,7 @@ public class Ballista : MonoBehaviour
 	public float range = 10f;
 	public float turnRate = 0.8f;
 	public float cooldown = 5f;
-	public float _cooldown;
+	private float _cooldown;
 	private bool onCooldown = false;
 	
 	void Start () 

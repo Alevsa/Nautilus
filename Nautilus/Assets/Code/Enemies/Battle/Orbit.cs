@@ -52,8 +52,9 @@ public class Orbit : MonoBehaviour
 			tangent.Rotate(90f * Vector3.up); 
 			move(tangent);	
 		}
+		#endregion
 	}
-	#endregion
+	
 	
 	#region Moves the object
 	void move(Transform target)

@@ -8,6 +8,7 @@ TagManager:
   - weather
   - PlayerBattle
   - Pointer
+  - Terrain
   layers:
   - Default
   - TransparentFX
