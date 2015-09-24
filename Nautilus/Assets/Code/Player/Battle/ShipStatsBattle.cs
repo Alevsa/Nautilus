@@ -7,6 +7,7 @@ public class ShipStatsBattle : MonoBehaviour
 	public float Acceleration = 1f;
 	public float TurnRate = 1f;
 	public float Health = 1f;
+	public float rightingForce = 1f;
 	
 	public float deathTime = 5f;
 	public float deathForce = 9.81f;
@@ -27,6 +28,7 @@ public class ShipStatsBattle : MonoBehaviour
 		}
 	}
 	
+	// This is fucked
 	public IEnumerator die()
 	{
 		Rigidbody body = GetComponent<Rigidbody>();

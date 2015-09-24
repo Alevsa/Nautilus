@@ -16,13 +16,13 @@ public class PlayerShipMovementBattle : MonoBehaviour
 		body = GetComponent<Rigidbody> ();
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		//		Debug.Log (body.velocity.magnitude);
 	}
 	
-	void FixedUpdate() {
+	void FixedUpdate() 
+	{
 		Movement ();
+		correctOrientation();
 	}
 	
 	public IEnumerator Accelerate() 
@@ -68,5 +68,15 @@ public class PlayerShipMovementBattle : MonoBehaviour
 		body.AddRelativeForce (forwardForce);
 		body.AddForceAtPosition (Vector3.right * turn, transform.position + Vector3.forward);
 		turn = 0;
+	}
+	
+	void correctOrientation()
+	{
+		if (transform.rotation.eulerAngles.z != 0f && shipStats.Health >= 0f)
+		{
+			Transform trn = transform;
+			trn.rotation = Quaternion.Euler(trn.rotation.eulerAngles.x, trn.rotation.eulerAngles.y, 0f);
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, trn.rotation, shipStats.rightingForce);
+		}
 	}
 }

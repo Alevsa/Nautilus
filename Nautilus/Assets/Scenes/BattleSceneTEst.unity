@@ -354,7 +354,8 @@ MonoBehaviour:
   Acceleration: 4
   TurnRate: 4
   Health: 1
-  deathTime: 15
+  rightingForce: 1
+  deathTime: 5
   deathForce: 9.81000042
 --- !u!114 &256168770
 MonoBehaviour:
@@ -4645,6 +4646,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11474744, guid: badeaf7d60b26d54a89d2b967284af54, type: 2}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493686, guid: badeaf7d60b26d54a89d2b967284af54, type: 2}
+      propertyPath: m_Mass
+      value: .00999999978
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: badeaf7d60b26d54a89d2b967284af54, type: 2}
   m_IsPrefabParent: 0
@@ -5977,7 +5986,7 @@ GameObject:
   - 154: {fileID: 1895511340}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
