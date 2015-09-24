@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
 		explode();
 	}
 	
-	void Update()
+	void FixedUpdate()
 	{
 		Vector3 forwardForce = Vector3.forward * speed;
 		body.AddRelativeForce (forwardForce);

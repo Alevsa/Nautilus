@@ -11,6 +11,7 @@ public class ShipStatsBattle : MonoBehaviour
 	
 	public float deathTime = 5f;
 	public float deathForce = 9.81f;
+	private bool dead = false;
 	
 	void OnCollisionEnter(Collision collision)
 	{	
@@ -22,8 +23,10 @@ public class ShipStatsBattle : MonoBehaviour
 	
 	void Update()
 	{
-		if (Health <= 0f)
+		if (Health <= 0f && !dead)
 		{
+			dead = true;
+			rightingForce = 0f;
 			StartCoroutine("die");
 		}
 	}
@@ -36,11 +39,12 @@ public class ShipStatsBattle : MonoBehaviour
 		float turnPerSecond = TurnRate/deathTime;
 		float accelerationPerSecond = Acceleration/deathTime;
 		deathForce = 0f;
+		Acceleration = 0f;
+		TurnRate = 0f;
+		
 		
 		while (deathTime > 0f)
 		{
-			Acceleration -= Time.deltaTime*accelerationPerSecond;
-			TurnRate -= Time.deltaTime*turnPerSecond;
 			deathForce += deathForcePerSecond*Time.deltaTime; 
 			body.AddForce(deathForce*Vector3.down);
 			yield return null;

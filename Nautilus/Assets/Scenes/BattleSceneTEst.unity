@@ -353,7 +353,7 @@ MonoBehaviour:
   MaxSpeed: 15
   Acceleration: 4
   TurnRate: 4
-  Health: 1
+  Health: .00999999978
   rightingForce: 1
   deathTime: 5
   deathForce: 9.81000042

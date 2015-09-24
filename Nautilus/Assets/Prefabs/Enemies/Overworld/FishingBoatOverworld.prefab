@@ -65,7 +65,7 @@ GameObject:
   - 65: {fileID: 6573986}
   - 114: {fileID: 11431422}
   m_Layer: 0
-  m_Name: OverworldEnemyAggressive
+  m_Name: FishingBoatOverworld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ GameObject:
   - 4: {fileID: 489912}
   m_Layer: 0
   m_Name: pointer
-  m_TagString: Untagged
+  m_TagString: Pointer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,8 +345,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: .100000001, z: .444000006}
-  m_Center: {x: 0, y: -.100000001, z: .0500000007}
+  m_Size: {x: 1, y: .100000001, z: .25}
+  m_Center: {x: 0, y: -.100000001, z: .0299999993}
 --- !u!114 &11431422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,7 +361,7 @@ MonoBehaviour:
   battleScenes:
   - BattleSceneTEst
   enemies:
-  - {fileID: 100000, guid: 6e62fbba86dd14440b505e6aefc92837, type: 3}
+  - {fileID: 114816, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
   spawnDistance: 200
 --- !u!114 &11461132
 MonoBehaviour:
@@ -660,6 +660,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: battleScenes.Array.data[0]
       value: BattleSceneTEst
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 114816, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Pointer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

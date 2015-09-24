@@ -23,6 +23,7 @@ public class PlayerShipMovementBattle : MonoBehaviour
 	{
 		Movement ();
 		correctOrientation();
+		correctAltitude();
 	}
 	
 	public IEnumerator Accelerate() 
@@ -77,6 +78,18 @@ public class PlayerShipMovementBattle : MonoBehaviour
 			Transform trn = transform;
 			trn.rotation = Quaternion.Euler(trn.rotation.eulerAngles.x, trn.rotation.eulerAngles.y, 0f);
 			transform.rotation = Quaternion.RotateTowards(transform.rotation, trn.rotation, shipStats.rightingForce);
+		}
+	}
+	
+	void correctAltitude()
+	{
+		if (transform.position.y > 0f)
+		{
+			body.AddForce(Vector3.down * shipStats.rightingForce);
+		}
+		else if (transform.position.z < 0f)
+		{
+			body.AddForce(Vector3.up * shipStats.rightingForce);
 		}
 	}
 }
