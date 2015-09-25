@@ -83,13 +83,10 @@ public class PlayerShipMovementBattle : MonoBehaviour
 	
 	void correctAltitude()
 	{
-		if (transform.position.y > 0f)
-		{
-			body.AddForce(Vector3.down * shipStats.rightingForce);
-		}
-		else if (transform.position.z < 0f)
-		{
-			body.AddForce(Vector3.up * shipStats.rightingForce);
+		if (transform.position.y != 0f)
+		{	
+			float y = transform.position.y;
+			body.AddForce(Vector3.down * y * shipStats.rightingForce);
 		}
 	}
 }

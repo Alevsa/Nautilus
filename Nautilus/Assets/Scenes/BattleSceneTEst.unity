@@ -247,8 +247,8 @@ Transform:
   m_PrefabParentObject: {fileID: 484484, guid: 44fe3e7d1fdc7754fb67537f88839cb1, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256168765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 8.96000004}
+  m_LocalRotation: {x: 0, y: 0, z: -.634117246, w: .77323693}
+  m_LocalPosition: {x: -1.63, y: 3.6500001, z: -.200000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1298559108}
@@ -354,7 +354,7 @@ MonoBehaviour:
   Acceleration: 4
   TurnRate: 4
   Health: .00999999978
-  rightingForce: 1
+  rightingForce: 98
   deathTime: 5
   deathForce: 9.81000042
 --- !u!114 &256168770
@@ -582,8 +582,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -.00655267388, y: .024181731, z: .0257725958}
-    m_Extent: {x: .00650553871, y: .00641496247, z: .0169780236}
+    m_Center: {x: -.00655267388, y: .0241817292, z: .0257726014}
+    m_Extent: {x: .013025146, y: .00641496526, z: .0194761697}
   m_DirtyAABB: 0
 --- !u!183 &355174019
 Cloth:
@@ -3153,8 +3153,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -.00701637799, y: .00121277571, z: .0233595129}
-    m_Extent: {x: .00720919156, y: .00640070951, z: .0172443353}
+    m_Center: {x: -.00701637939, y: .00121277012, z: .0233595185}
+    m_Extent: {x: .013831066, y: .00640071556, z: .0200126879}
   m_DirtyAABB: 0
 --- !u!183 &886580297
 Cloth:
@@ -3463,7 +3463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114816, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
@@ -4788,7 +4788,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1599976129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.15069962, y: .130781651, z: -2.17511678}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
