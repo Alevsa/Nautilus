@@ -28,6 +28,12 @@ public class Ballista : MonoBehaviour
 
 	void Update () 
 	{
+		if (target.GetComponent<ShipStatsBattle>().dead || transform.parent.GetComponent<EnemyStats>().dead)
+		{
+			onCooldown = true;
+			cooldown = 9999999f;
+		}
+	
 		checkCooldown();	
 		rotateTurret();
 		if (iShouldShoot() && !onCooldown)

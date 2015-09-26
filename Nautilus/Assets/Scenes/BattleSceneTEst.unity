@@ -3463,7 +3463,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114816, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457134, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
+      propertyPath: rightingForce
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
