@@ -357,6 +357,7 @@ MonoBehaviour:
   rightingForce: 98
   deathTime: 5
   deathForce: 9.81000042
+  dead: 0
 --- !u!114 &256168770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3422,6 +3423,28 @@ Transform:
   - {fileID: 749312174}
   m_Father: {fileID: 1298559108}
   m_RootOrder: 3
+--- !u!1 &1095902199 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 114816, guid: 1664dd1177bdfe14e9051cfe924312b9, type: 2}
+  m_PrefabInternal: {fileID: 1176212861}
+--- !u!114 &1095902203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1095902199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fc392d540fb1147997d89d69b76b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  dead: 0
+  deathForce: 9.81000042
+  deathTime: 10
+  rightingForce: 98.0999985
+  turnRate: 1
+  speed: 7
 --- !u!1001 &1176212861
 Prefab:
   m_ObjectHideFlags: 0

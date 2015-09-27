@@ -24,16 +24,21 @@ public class Overmind : MonoBehaviour
 	{		
 		rememberScene();
 		setPlayerActivity();
+		if (Application.loadedLevelName != "Overworld")
+		{
+			// ???
+		}
 	}
 	
 	private void rememberScene()
 	{
-		// This should always evaluate to true regardless.
 		if (scene != "Loader")
 		{
 			scene = Application.loadedLevelName;
 		}
 	}
+	
+	
 	
 	#region sets the player prefab to active or inactive depending on the scene
 	private void setPlayerActivity()
