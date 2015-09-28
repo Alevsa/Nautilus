@@ -41,13 +41,14 @@ public class PlayerControlSpaceBattle : MonoBehaviour
 	void InGameInput() 
 	{
 		
-		if (Input.GetButtonDown ("Accelerate"))
+		if (Input.GetButton ("Accelerate"))
 			handlerMovement.accelerate();
-		else if (Input.GetButtonDown ("Brake"))
-			handlerMovement.StartCoroutine("Brake");
+		else if (Input.GetButton ("Brake"))
+			handlerMovement.decelerate();
+		else if (Input.GetButton ("Turn"))
+			handlerMovement.roll(Input.GetAxisRaw("Turn"));
 		else 
 			handlerMovement.decelerate ();
-		
 		rotateShip();		
 	}
 	

@@ -46,6 +46,11 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 		}
 	} 
 	
+	public void roll(float direction)
+	{
+		transform.Rotate(new Vector3(0f, 0f, direction * stats.sensitivity * 0.01f));
+	}
+	
 	// Don't complain, it's a prototype.
 	public void handleMouse(float x, float y)
 	{
