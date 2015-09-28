@@ -7,11 +7,12 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 	private Rigidbody body;
 	private GameObject playerCam;
 	private float speed;
-	
+	[HideInInspector]
+	public Vector3 newPosition;
 	
 	void Start()
 	{
-		playerCam = GameObject.FindGameObjectsWithTag("MainCamera");
+		playerCam = GameObject.FindGameObjectWithTag("MainCamera");
 		stats = GetComponent<PlayerStatsSpaceBattle> ();
 		body = GetComponent<Rigidbody> ();
 	}
@@ -24,10 +25,12 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 	void movement()
 	{
 		body.AddRelativeForce(Vector3.forward * speed);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, GetComponent<Camera>().transform.rotation, stats.turnRate);
+		
+		// Camera should follow the players movement not vice versa
+		// transform.rotation = Quaternion.RotateTowards(transform.rotation, playerCam.transform.rotation, stats.turnRate);
 	}
 	
-	void acceletate()
+	public void accelerate()
 	{
 		if (speed < stats.maxSpeed)
 		{
@@ -35,6 +38,17 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 		}
 	}
 	
+	public void decelerate()
+	{
+		if (speed > 0f)
+		{
+			speed -= stats.acceleration;
+		}
+	} 
 	
-	
+	// Don't complain, it's a prototype.
+	public void handleMouse(float x, float y)
+	{
+		transform.Rotate(-1f * stats.sensitivity * y, stats.sensitivity * x, 0f);
+	}
 }
