@@ -57,7 +57,7 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 	
 	public void roll(float direction)
 	{
-		transform.Rotate(new Vector3(0f, 0f, direction * stats.rollSensitivity));
+		transform.Rotate(new Vector3(0f, 0f, direction * stats.rollSensitivity ));
 	}
 	
 	// Don't complain, it's a prototype.

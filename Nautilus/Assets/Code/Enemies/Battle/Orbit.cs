@@ -17,6 +17,8 @@ public class Orbit : MonoBehaviour
 	
 		body = GetComponent<Rigidbody> ();
 		target = GameObject.FindGameObjectWithTag("PlayerBattle");
+		
+		#region Gets the pointer
 		for (int i = 0; i<transform.childCount; i++)
 		{	
 			GameObject obj = transform.GetChild(i).gameObject;
@@ -25,6 +27,7 @@ public class Orbit : MonoBehaviour
 				pointer = obj;
 			}
 		}
+		#endregion
 	}
 	
 	void Update () 

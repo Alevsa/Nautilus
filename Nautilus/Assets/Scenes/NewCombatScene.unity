@@ -415,9 +415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   sensitivity: 50
-  maxSpeed: 20
+  maxSpeed: 10
   acceleration: 100
-  rollSensitivity: 100
+  rollSensitivity: 10
   isInverted: 1
 --- !u!54 &357062841
 Rigidbody:
@@ -687,7 +687,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867312459}
   m_LocalRotation: {x: .0402746461, y: 0, z: 0, w: .999188721}
-  m_LocalPosition: {x: 0, y: 1, z: -8.80000019}
+  m_LocalPosition: {x: .384000003, y: 1, z: -31.8640003}
   m_LocalScale: {x: 1, y: 1.33166015, z: 1.00216234}
   m_Children: []
   m_Father: {fileID: 357062838}
