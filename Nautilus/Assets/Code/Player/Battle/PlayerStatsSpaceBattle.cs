@@ -7,4 +7,6 @@ public class PlayerStatsSpaceBattle : MonoBehaviour
 	public float sensitivity = 1f;
 	public float maxSpeed = 15f;
 	public float acceleration = 3f;
+	public float rollSensitivity = 100f;
+	public bool isInverted = false;
 }

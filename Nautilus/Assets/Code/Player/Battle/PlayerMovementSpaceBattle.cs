@@ -7,6 +7,7 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 	private Rigidbody body;
 	private GameObject playerCam;
 	private float speed;
+	private int inverted = 1;
 	[HideInInspector]
 	public Vector3 newPosition;
 	
@@ -15,6 +16,14 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 		playerCam = GameObject.FindGameObjectWithTag("MainCamera");
 		stats = GetComponent<PlayerStatsSpaceBattle> ();
 		body = GetComponent<Rigidbody> ();
+		if (stats.isInverted)
+		{
+			inverted = 1;
+		}
+		else 
+		{
+			inverted = -1;
+		}
 	}
 	
 	void FixedUpdate()
@@ -48,12 +57,12 @@ public class PlayerMovementSpaceBattle : MonoBehaviour
 	
 	public void roll(float direction)
 	{
-		transform.Rotate(new Vector3(0f, 0f, direction * stats.sensitivity * 0.01f));
+		transform.Rotate(new Vector3(0f, 0f, direction * stats.rollSensitivity));
 	}
 	
 	// Don't complain, it's a prototype.
 	public void handleMouse(float x, float y)
 	{
-		transform.Rotate(-1f * stats.sensitivity * y, stats.sensitivity * x, 0f);
+		transform.Rotate(inverted * stats.sensitivity * y, stats.sensitivity * x, 0f);
 	}
 }

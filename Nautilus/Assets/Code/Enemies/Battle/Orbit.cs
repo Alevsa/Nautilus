@@ -29,10 +29,11 @@ public class Orbit : MonoBehaviour
 	
 	void Update () 
 	{
-		if (target.GetComponent<ShipStatsBattle>().dead)
+	/*
+		if (target.GetComponent<PlayerStatsSpaceBattle>().dead)
 		{
 			stats.speed = 0f; stats.turnRate = 0f;
-		}
+		}*/
 		float distance = distanceFromPlayer();
 		#region Get closer if too far away, move away when too close and orbit when in between.
 		// Move toward target
