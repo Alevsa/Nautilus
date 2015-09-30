@@ -55,13 +55,13 @@ public class PlayerControlNew : MonoBehaviour {
 			handlerMovement.Decelerate ();
 
 		handlerMovement.Turn ((int)Input.GetAxisRaw("Turn"));
-
+/*
         if (Input.GetButtonDown("Fire1"))
             m_WeapControl.Fire(0);
 
         if (Input.GetButtonDown("Fire2"))
             m_WeapControl.Fire(1);
-		
+*/		
 	}
 
     private void CameraControls()

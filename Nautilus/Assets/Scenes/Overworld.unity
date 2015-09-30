@@ -18085,7 +18085,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 401912, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .459970474
+      value: 71.5
       objectReference: {fileID: 0}
     - target: {fileID: 401912, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -18093,7 +18093,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401912, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -22.3700104
+      value: -44.2000008
       objectReference: {fileID: 0}
     - target: {fileID: 401912, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18134,6 +18134,18 @@ Prefab:
     - target: {fileID: 401912, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481558, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
+      propertyPath: townname
+      value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481558, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
+      propertyPath: subtitle
+      value: Humanities Birthplace
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481558, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
+      propertyPath: townID
+      value: earth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80d8fbf124f8abd448f7b8d04c915a9b, type: 2}
